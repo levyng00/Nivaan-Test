@@ -2,6 +2,7 @@ import Footer from "@/sections/Footer/Footer";
 import Navbar from "@/sections/Nav/Navbar";
 import OurCareExperts from "@/sections/OurCareExperts/OurCareExperts";
 import TreatmentAtNivaan from "@/sections/TreatmentAtNivaan/TreatmentAtNivaan";
+import WhatPatientSayAboutUs from "@/sections/WhatPatientSayAboutUs/WhatPatientSayAboutUs";
 import Image from "next/image";
 
 export default function Home() {
@@ -10,6 +11,7 @@ export default function Home() {
         <Navbar />
         <OurCareExperts />
         <TreatmentAtNivaan />
+        <WhatPatientSayAboutUs />
         <Footer />
     </main>
   );
