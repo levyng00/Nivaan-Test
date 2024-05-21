@@ -9,7 +9,7 @@ const WhatPatientSayAboutUs = () => {
   return (
     <section>
       <h2 className='text-[18px] leading-[22.09px]'>What Our Patients Say About Us!</h2>
-      <PatientReviewCardCarousel review={patientReviewData} />
+      <PatientReviewCardCarousel reviews={patientReviewData} />
     </section>
   )
 }
