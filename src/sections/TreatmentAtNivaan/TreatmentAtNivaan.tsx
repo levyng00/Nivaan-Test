@@ -2,20 +2,21 @@ import React from 'react'
 import Treatment1 from '../../../public/desktop/treatment-1.webp'
 import Treatment2 from '../../../public/desktop/treatment-2.webp'
 import Treatment3 from '../../../public/desktop/treatment-3.webp'
-import Treatment1Mob from '../../../public/mobile/treatment-1-mob.webp'
-import Treatment2Mob from '../../../public/mobile/treatment-2-mob.webp'
-import Treatment3Mob from '../../../public/mobile/treatment-3-mob.webp'
 import TreatmentCard from '@/components/TreatmentCard'
+import TreatmentCarousel from '@/components/TreatmentCarousel'
 
 const TreatmentAtNivaan = () => {
   return (
-    <section className='bg-[#EAF1FB] py-[42px] px-6 md:px-[70px]'>
-        <h2 className='font-extrabold text-[42px] leading-[51.2px] text-[#2F438F] text-center'>Osteoarthritis Treatments at Nivaan</h2>
-        <p className='text-[20.55px] leading-[32px] mt-6 mb-8'>We use the most advanced pain-relief technologies to ensure  maximum pain relief</p>
-        <div className='flex flex-row gap-4'>
+    <section className='bg-[#EAF1FB] py-[42px] px-11 md:px-[70px]'>
+        <h2 className='mx-auto w-[75%] md:w-full font-extrabold text-[18px] leading-[20.34px] md:text-[42px] md:leading-[51.2px] text-[#2F438F] text-center'>Osteoarthritis Treatments at Nivaan</h2>
+        <p className='mx-auto w-[90%] md:w-full text-[12px] leading-[14.22px] md:text-[20.55px] md:leading-[32px] mt-6 mb-8 text-center'>We use the most advanced pain-relief technologies to ensure  maximum pain relief</p>
+        <div className='hidden md:flex md:flex-row md:gap-4 justify-center'>
             {
-                TreatmentCardData.map(treatment => <TreatmentCard treatment={treatment} />)
+                TreatmentCardData.map(treatment => <TreatmentCard key={treatment.id} treatment={treatment} />)
             }
+        </div>
+        <div className='block md:hidden'>
+            <TreatmentCarousel />
         </div>
     </section>
   )

@@ -3,6 +3,9 @@ import React from 'react'
 import NivaanWhiteLogo from '../../../public/desktop/nivaan-white-logo.webp'
 import NivaanWhiteMobLogo from '../../../public/mobile/nivaan-white-logo-mob.webp'
 import { Separator } from '@/components/ui/separator'
+import social1 from '../../../public/social1.png'
+import social2 from '../../../public/social2.png'
+import social3 from '../../../public/social3.png'
 
 const FooterLinks = [
     { 
@@ -50,13 +53,13 @@ const Footer = () => {
                 <Image className='block md:hidden mx-auto mb-4' src={NivaanWhiteMobLogo} alt='Nivaan Footer mobile logo' />
                 <p className='text-xs w-3/4 mx-auto'>India’s First Most Advanced Non-Surgical Pain Treatment Chain Of Clinics</p>
             </div>
-            <div className='mx-14'>
+            <div className='mx-12 md:mx-14'>
                 <Separator className="my-6" />
                 {/* <div className='flex flex-row justify-between'> */}
                 <div className='grid grid-cols-2 md:grid-cols-4 md:w-4/5 md:mx-auto'>
                     {
                         FooterLinks.map(obj => (
-                            <div className='flex flex-col items-start md:px-18 mb-4'>
+                            <div className='flex flex-col items-start md:px-18 mb-4 px-5 gap-2'>
                                 <h6 className='text-sm leading-8 font-medium'>{obj.title}</h6>
                                 <ul>
                                     {
