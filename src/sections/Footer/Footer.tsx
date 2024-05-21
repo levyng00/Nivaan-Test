@@ -6,6 +6,7 @@ import { Separator } from '@/components/ui/separator'
 
 const FooterLinks = [
     { 
+        id: 1,
         title: 'Quick links', 
         links: [
             {subTitle: 'Privacy Policy', url: 'https://www.nivaancare.com/privacy-policy/'}, 
@@ -13,6 +14,7 @@ const FooterLinks = [
         ]
     }, 
     {   
+        id: 2,
         title: 'Clinic locations', 
         links: [
             {subTitle: 'East-Delhi', url: 'https://maps.app.goo.gl/fmNjuaiuNwNQxWbS7'}, 
@@ -22,6 +24,7 @@ const FooterLinks = [
         ]
     }, 
     {
+        id: 3,
         title: 'About Us', 
         links: [
             {subTitle: 'Blogs', url: 'https://www.nivaancare.com/blog/'}, 
@@ -29,6 +32,7 @@ const FooterLinks = [
         ]
     }, 
     {
+        id: 4,
         title: 'Contact Us', 
         links: [
             {subTitle: 'care@nivaancare.com', url: 'mailto:care@nivaancare.com'}, 
@@ -44,27 +48,30 @@ const Footer = () => {
             <div className='text-center'>
                 <Image className='hidden md:block mx-auto mb-4' src={NivaanWhiteLogo} alt='Nivaan Footer logo' />
                 <Image className='block md:hidden mx-auto mb-4' src={NivaanWhiteMobLogo} alt='Nivaan Footer mobile logo' />
-                <p className='text-xs'>India’s First Most Advanced Non-Surgical Pain Treatment Chain Of Clinics</p>
+                <p className='text-xs w-3/4 mx-auto'>India’s First Most Advanced Non-Surgical Pain Treatment Chain Of Clinics</p>
             </div>
-            <Separator className="my-6" />
-            <div className='flex flex-row justify-between'>
-                {
-                    FooterLinks.map(obj => (
-                        <div className='flex flex-col'>
-                            <h6 className='text-sm leading-8 font-medium'>{obj.title}</h6>
-                            <ul>
-                                {
-                                    obj.links.map(x => (
-                                        <li className='text-xs leading-6 font-light'><a href={`${x.url}`}>{x.subTitle}</a></li>
-                                    ))
-                                }
-                            </ul>
-                        </div>
-                    ))
-                }
+            <div className='mx-14'>
+                <Separator className="my-6" />
+                {/* <div className='flex flex-row justify-between'> */}
+                <div className='grid grid-cols-2 md:grid-cols-4 md:w-4/5 md:mx-auto'>
+                    {
+                        FooterLinks.map(obj => (
+                            <div className='flex flex-col items-start md:px-18 mb-4'>
+                                <h6 className='text-sm leading-8 font-medium'>{obj.title}</h6>
+                                <ul>
+                                    {
+                                        obj.links.map(x => (
+                                            <li key={obj.id} className='text-xs leading-6 font-light'><a href={x.url} target="_blank" rel="noopener noreferrer">{x.subTitle}</a></li>
+                                        ))
+                                    }
+                                </ul>
+                            </div>
+                        ))
+                    }
+                </div>
+                <Separator className="mt-6 mb-3" />
+                <p className='text-xs font-light pb-10 text-center'>© 2024 Nivaan. All Rights Reserved. Terms & Conditions Apply*</p>
             </div>
-            <Separator className="mt-6 mb-3" />
-            <p className='text-xs font-light pb-10 text-center'>© 2024 Nivaan. All Rights Reserved. Terms & Conditions Apply*</p>
         </div>
     </section>
   )

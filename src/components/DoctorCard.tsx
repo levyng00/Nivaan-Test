@@ -17,18 +17,17 @@ export interface Doctor {
 
 const DoctorCard: React.FC<DoctorCardProps> = ({ doc }) => {
   return (
-    <Card className='px-14 md:text-center'>
+    <Card className='px-0 md:px-14 mb-6 md:text-center flex flex-row md:flex-col'>
         <CardHeader>
             <Image className='mx-auto' src={doc.img} alt='doctor img' />
-            <CardTitle className='font-semibold text-sm md:text-xl'>{doc.name}</CardTitle>
         </CardHeader>
-        <CardContent className='text-[11px] leading-[18.94px] md:text-base'>
+        <CardContent className='w-[130%] md:w-full mt-4 text-[11px] leading-[18.94px] md:text-base'>
+            <h3 className='font-semibold text-sm md:text-xl'>{doc.name}</h3>
             <p>{doc.field}</p>
             <p>{doc.degree}</p>
+            <p className='bg-[#EAF1FB] text-[#2F438F] text-xs md:text-xl mt-2 block md:hidden'>{`${doc.experience} years of experience`}</p>
         </CardContent>
-        <CardFooter>
-            <p className='bg-[#EAF1FB] text-[#2F438F] text-xs md:text-xl'>{`${doc.experience} years of experience`}</p>
-        </CardFooter>
+        <p className='bg-[#EAF1FB] text-[#2F438F] text-xl mt-2 hidden md:block'>{`${doc.experience} years of experience`}</p>
     </Card>
   )
 }
