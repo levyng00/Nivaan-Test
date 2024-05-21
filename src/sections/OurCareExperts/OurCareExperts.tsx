@@ -11,8 +11,8 @@ import CustomButton from '@/components/CustomButton'
 const OurCareExperts = () => {
     const handleClick = () => console.log('Book Consultation in OurCareExperts')
   return (
-    <section>
-        <h2 className='mb-6 mt-12 text-center font-extrabold text-lg md:text-[42px] md:leading-[51.2px]'>Our Care Experts</h2>
+    <section className='px-6 md:px-[70px]'>
+        <h2 className='mb-6 mt-12 text-center font-extrabold text-lg md:text-[42px] md:leading-[51.2px] text-[#2F438F]'>Our Care Experts</h2>
         <div className='hidden md:flex md:flex-row md:justify-between'>
             {
                 doctorData.map(doc => <DoctorCard key={doc.id} doc={doc} />)
