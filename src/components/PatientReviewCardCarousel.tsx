@@ -15,22 +15,26 @@ interface patientReviewProps {
 
 const PatientReviewCardCarousel: React.FC<patientReviewProps> = ({ reviews }) => {
   return (
+    <div className='px-16'>
     <Carousel
       opts={{
         align: "start",
       }}
-      className="w-full max-w-sm"
+      className="w-full"
     >
       <CarouselContent>
         {reviews?.map(review => (
-            <CarouselItem key={review.id}>
-                <PatientReviewCard review={review} />
+            <CarouselItem key={review.id} className="md:basis-1/2 lg:basis-1/3">
+                <div className="p-1">
+                    <PatientReviewCard review={review} />
+                </div>
              </CarouselItem>
         ))}
       </CarouselContent>
       <CarouselPrevious />
       <CarouselNext />
     </Carousel>
+    </div>
   )
 }
 
