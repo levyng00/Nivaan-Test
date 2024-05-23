@@ -23,12 +23,12 @@ const Faq = () => {
     );
   });
   return (
-    <div className="bg-[#EAF1FB] py-6">
+    <div className="bg-[#EAF1FB] lg:py-6">
       <div className="max-w-7xl mx-auto p-6 flex flex-col ">
         <div className=" flex justify-center"></div>
 
         <h1
-          className={`${montserratBold.className}  text-center text-2xl text-[#2F438F] lg:w-full my-6 lg:text-5xl`}
+          className={`${montserratBold.className}  text-center text-2xl text-[#2F438F] lg:w-full lg:my-6 my-2 lg:text-5xl`}
         >
           FAQ's
         </h1>

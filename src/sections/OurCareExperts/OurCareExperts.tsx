@@ -20,7 +20,7 @@ const OurCareExperts = () => {
           <DoctorCard key={doc.id} doc={doc} />
         ))}
       </div>
-      <div className="flex flex-col md:hidden">
+      <div className="flex flex-col md:hidden  items-center">
         {doctorData.map((doc) => (
           <DoctorCard key={doc.id} doc={doc} />
         ))}

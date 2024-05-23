@@ -7,7 +7,7 @@ import CustomButton from "@/components/CustomButton";
 const Navbar = () => {
   const handleClick = () => console.log("Button Clicked !!!");
   return (
-    <section className="flex flex-row justify-between py-3 md:py-6 max-w-7xl mx-auto">
+    <section className="flex flex-row justify-between py-3 md:py-6 max-w-7xl mx-auto px-6 lg:px-0">
       <Image
         className="hidden md:flex"
         src={NivaanLogo}
@@ -17,10 +17,9 @@ const Navbar = () => {
       />
       <Image
         className="flex md:hidden"
-        src={NivaanLogoMob}
+        src={NivaanLogo}
         alt="Nivaan logo in Mobile Navbar"
-        width={74.67}
-        height={16.67}
+        height={20}
       />
       <CustomButton
         className="bg-[#DB5115]"
