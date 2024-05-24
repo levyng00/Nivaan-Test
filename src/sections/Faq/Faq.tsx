@@ -30,7 +30,7 @@ const Faq = () => {
         <h1
           className={`${montserratBold.className}  text-center text-2xl text-[#2F438F] lg:w-full lg:my-6 my-2 lg:text-5xl`}
         >
-          FAQ's
+          FAQ&apos;s
         </h1>
         {cardMap}
       </div>

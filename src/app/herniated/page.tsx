@@ -7,19 +7,21 @@ import Navbar from "@/sections/Nav/Navbar";
 import OurCareExperts from "@/sections/OurCareExperts/OurCareExperts";
 import TreatmentAtNivaan from "@/sections/TreatmentAtNivaan/TreatmentAtNivaan";
 import WhatPatientSayAboutUs from "@/sections/WhatPatientSayAboutUs/WhatPatientSayAboutUs";
-import React from "react";
+import React, { Suspense } from "react";
 
 const page = () => {
   return (
     <div>
-      <Navbar />
-      <HeroSection />
-      <OurCareExperts />
-      <TreatmentAtNivaan />
-      <WhatPatientSayAboutUs />
-      <Faq />
-      <FormAd />
-      <Footer />
+      <Suspense>
+        <Navbar />
+        <HeroSection />
+        <OurCareExperts />
+        <TreatmentAtNivaan />
+        <WhatPatientSayAboutUs />
+        <Faq />
+        <FormAd />
+        <Footer />
+      </Suspense>
     </div>
   );
 };
