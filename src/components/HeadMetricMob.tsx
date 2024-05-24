@@ -4,9 +4,12 @@ import React from "react";
 const HeadMetricMob = () => {
   return (
     <div className="grid grid-cols-2 gap-4 lg:hidden pb-6">
-      {metricData.map((data) => {
+      {metricData.map((data, i) => {
         return (
-          <div className="bg-[#2F438F] rounded-lg text-white p-2 text-center flex flex-col items-center py-4">
+          <div
+            key={i}
+            className="bg-[#2F438F] rounded-lg text-white p-2 text-center flex flex-col items-center py-4"
+          >
             <p className={`${rubikBold.className}`}>{data.title}</p>
             <p className={`${rubikLight.className} text-xs w-32 `}>
               {data.desc}
