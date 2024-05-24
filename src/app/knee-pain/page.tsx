@@ -8,6 +8,7 @@ import OurCareExperts from "@/sections/OurCareExperts/OurCareExperts";
 import TreatmentAtNivaan from "@/sections/TreatmentAtNivaan/TreatmentAtNivaan";
 import WhatPatientSayAboutUs from "@/sections/WhatPatientSayAboutUs/WhatPatientSayAboutUs";
 import React, { Suspense } from "react";
+import FloatingButton from "@/components/FloatingButton";
 
 const page = () => {
   return (
@@ -15,6 +16,7 @@ const page = () => {
       <Suspense>
         <Navbar />
         <HeroSection />
+        <FloatingButton />
         <OurCareExperts />
         <TreatmentAtNivaan />
         <WhatPatientSayAboutUs />
