@@ -9,7 +9,7 @@ import React from "react";
 
 const HeroSection = () => {
   return (
-    <div className="bg-[#EAF1FB] pt-8 px-8 lg:px-0 relative">
+    <div className="bg-[#EAF1FB] pt-4 px-8 lg:px-0 relative">
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-10 relative">
         <div className="flex-1">
           <h1
@@ -18,7 +18,7 @@ const HeroSection = () => {
             Non Surgical Osteoarthritis Treatment
           </h1>
           <ul
-            className={`text-[#1E1E1E] list-disc text-[14px] leading-[16.59px] lg:text-[26.67px] lg:leading-[31.6px] lg:mt-14 mt-6 text-xl flex flex-col gap-2 ${rubikLight.className} px-4`}
+            className={`font-light list-disc text-[14px] lg:text-[26.67px] lg:leading-[31.6px] lg:mt-14 mt-6 text-xl flex flex-col gap-2 ${rubikLight.className} px-4`}
           >
             <div className="flex items-center">
               <li>4.8+ Rating on</li>
@@ -43,14 +43,14 @@ const HeroSection = () => {
         </div>
         <div className="relative flex-1 flex justify-center items-center md:hidden">
           <Image 
-            className="absolute bottom-[-40px] right-[-30px]" 
+            className="absolute bottom-[-154px] right-[-30px]" 
             src={heroImgMob} 
             alt="hero Img" 
             width={250} // Add width
             height={250} // Add height
           />
         </div>
-        <div className="flex-1 flex justify-center flex-col items-center gap-3">
+        <div className="flex-1 flex justify-center flex-col items-center gap-3 mt-28">
           <Form />
         </div>
       </div>

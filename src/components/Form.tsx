@@ -5,6 +5,7 @@ import Image from "next/image";
 import React, { useEffect, useRef, useState } from "react";
 import { usePathname, useSearchParams } from "next/navigation";
 import { rubikReg, rubikSemiBold, rubikSemiBolder } from "@/app/fonts";
+import CustomButton from "./CustomButton";
 
 const defaultFormAction =
   "https://forms.zohopublic.in/nivaancare/form/NivaanNextjsLandingPageForm/formperma/Y2HL_Hh_THFjClPHcsQQZEjs07EIREE70jNJB07Srvk/htmlRecords/submit";
@@ -218,12 +219,17 @@ const Form = ({
         )}
       </div>
       <div className="flex justify-center mt-2 lg:mt-0">
-        <button
+        {/* <button
           type="submit"
-          className="bg-[#DB5115] rounded-lg flex gap-2 shadow-sm mt-12 lg:mt-0 px-8 text-white font-semibold p-2"
+          className="bg-[#DB5115] rounded-lg flex gap-2 shadow-sm mt-2 lg:mt-0 px-8 text-white font-semibold p-2"
         >
           Consult Now
-        </button>
+        </button> */}
+        <CustomButton
+          className="bg-[#DB5115]"
+          title="Consult Now"
+          onBtnClick={() => console.log('consult now')}
+        />
       </div>
     </form>
   );

@@ -13,7 +13,7 @@ const CustomButton: React.FC<CustomButtonProps> = ({
   className,
 }) => {
   const baseStyles =
-    "font-bold rounded-xl text-xs md:text-3xl py-2 px-2.5 md:py-3 md:px-6 text-white";
+    "font-bold rounded-lg text-xs md:text-3xl py-2 px-4 md:py-3 md:px-6 text-white";
   const combinedStyles = cn(baseStyles, className);
 
   return <button className={combinedStyles}>{title}</button>;

@@ -1,4 +1,3 @@
-import HeaderMetric from "@/components/HeaderMetric";
 import Faq from "@/sections/Faq/Faq";
 import Footer from "@/sections/Footer/Footer";
 import FormAd from "@/sections/FormAd/FormAd";
