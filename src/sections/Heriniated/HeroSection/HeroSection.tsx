@@ -8,7 +8,7 @@ import React from "react";
 
 const HeroSection = () => {
   return (
-    <div className="bg-[#EAF1FB] pt-8 px-8">
+    <div className="bg-[#EAF1FB] pt-8 px-8 lg:px-0 ">
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-10">
         <div className="flex-1">
           <h1
