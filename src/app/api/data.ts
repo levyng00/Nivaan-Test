@@ -28,10 +28,10 @@ export type Review = {
   name: string;
   reviewText: string;
   postedWhen: string;
-  img: ImageLoaderProps;
+  img: StaticImageData;
 };
 
-export type Card = {
+export type faqData = {
   title: string;
   desc: string;
 };
@@ -39,7 +39,7 @@ export type Card = {
 export type TreatmentData = {
     id: number;
     name: string;
-    img: ImageLoaderProps;
+    img: StaticImageData;
     process: string;
     benefits: string[]
 }
@@ -152,7 +152,7 @@ export const herniatedPatientReviewData: Review[] = [
     },
 ];
   
-export const herniatedFaqData: Card[] = [
+export const herniatedFaqData: faqData[] = [
 {
     title: "What is the Osteoarthritis?",
     desc: "Osteoarthritis is a degenerative joint disease that is characterized by the breakdown of joint cartilage and the underlying bones, causing joint pain with swelling, reduced mobility, and joint stiffness.",
@@ -235,7 +235,7 @@ export const kneePainPatientReviewData: Review[] = [
   }
 ];
 
-export const kneePainFaqData: Card[] = [
+export const kneePainFaqData: faqData[] = [
     {
       title: "Why choose Nivaan over other hospitals for knee pain treatment?",
       desc: "Nivaan stands out for its multidisciplinary approach, combining advanced non-surgical methods, personalised care, and a team of experienced specialists. This holistic approach ensures comprehensive treatment with a focus on not just relieving symptoms but also addressing the root causes of knee pain.",
@@ -311,7 +311,7 @@ export const osteoarthritisPatientReviewData: Review[] = [
     },
 ];
   
-export const osteoarthritisFaqData: Card[] = [
+export const osteoarthritisFaqData: faqData[] = [
     {
         title: "What is the Osteoarthritis?",
         desc: "Osteoarthritis is a degenerative joint disease that is characterized by the breakdown of joint cartilage and the underlying bones, causing joint pain with swelling, reduced mobility, and joint stiffness.",

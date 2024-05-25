@@ -5,10 +5,11 @@ import doc3Mob from "../../../public/mobile/doc3-mob.webp";
 import doc1 from "../../../public/desktop/doc-1.webp";
 import doc2 from "../../../public/desktop/doc-2.webp";
 import doc3 from "../../../public/desktop/doc-3.webp";
-import DoctorCard, { Doctor } from "@/components/DoctorCard";
+import DoctorCard from "@/components/DoctorCard";
 import CustomButton from "@/components/CustomButton";
+import { Doctor } from "@/app/api/data";
 
-const OurCareExperts = () => {
+const OurCareExperts = ({doctorData}: {doctorData: Doctor[]}) => {
   const handleClick = () => console.log("Book Consultation in OurCareExperts");
   return (
     <section className="max-w-7xl mx-auto">

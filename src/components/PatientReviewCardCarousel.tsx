@@ -1,5 +1,5 @@
 import React from 'react'
-import PatientReviewCard, { patientReview } from './PatientReviewCard'
+import PatientReviewCard from './PatientReviewCard'
 import { Card, CardContent } from "@/components/ui/card"
 import {
   Carousel,
@@ -8,12 +8,9 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel"
+import { Review } from '@/app/api/data'
 
-interface patientReviewProps {
-    reviews: patientReview[];
-}
-
-const PatientReviewCardCarousel: React.FC<patientReviewProps> = ({ reviews }) => {
+const PatientReviewCardCarousel = ({ reviews }: { reviews: Review[] }) => {
   return (
     <div className='px-12 md:px-16'>
     <Carousel
@@ -29,8 +26,10 @@ const PatientReviewCardCarousel: React.FC<patientReviewProps> = ({ reviews }) =>
             </CarouselItem>
         ))}
       </CarouselContent>
-      <CarouselPrevious />
-      <CarouselNext />
+      <div className={`block md:${reviews.length>3 ? "hidden" : "block"}`}>
+        <CarouselPrevious />
+        <CarouselNext />
+      </div>
     </Carousel>
     </div>
   )

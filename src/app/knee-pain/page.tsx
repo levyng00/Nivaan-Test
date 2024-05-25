@@ -8,6 +8,7 @@ import TreatmentAtNivaan from "@/sections/TreatmentAtNivaan/TreatmentAtNivaan";
 import WhatPatientSayAboutUs from "@/sections/WhatPatientSayAboutUs/WhatPatientSayAboutUs";
 import React, { Suspense } from "react";
 import FloatingButton from "@/components/FloatingButton";
+import { doctorData, kneePainFaqData, kneePainPatientReviewData, kneePainTreatmentAtNivan } from "../api/data";
 
 const page = () => {
   return (
@@ -16,10 +17,10 @@ const page = () => {
         <Navbar />
         <HeroSection />
         <FloatingButton />
-        <OurCareExperts />
-        <TreatmentAtNivaan />
-        <WhatPatientSayAboutUs />
-        <Faq />
+        <OurCareExperts doctorData={doctorData} />
+        <TreatmentAtNivaan TreatmentCardData={kneePainTreatmentAtNivan} />
+        <WhatPatientSayAboutUs patientReviewData={kneePainPatientReviewData} />
+        <Faq askedCardData={kneePainFaqData} />
         <FormAd />
         <Footer />
       </Suspense>

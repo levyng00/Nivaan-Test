@@ -7,8 +7,9 @@ import PatientReviewCardCarousel from '@/components/PatientReviewCardCarousel'
 import googleIcon2 from '../../../public/desktop/google-logo.webp'
 import Image from 'next/image'
 import starImg from '../../../public/desktop/Stars.webp'
+import { Review } from '@/app/api/data'
 
-const WhatPatientSayAboutUs = () => {
+const WhatPatientSayAboutUs = ({patientReviewData}: {patientReviewData: Review[]}) => {
   return (
     <section className='pb-20'>
       <h2 className='text-[18px] leading-[22.09px] md:text-[42px] md:leading-[51.2px] font-extrabold mt-12 mb-8 text-[#2F438F] text-center w-1/2 md:w-full mx-auto'>What Our Patients Say About Us!</h2>

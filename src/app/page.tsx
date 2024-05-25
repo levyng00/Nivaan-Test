@@ -8,6 +8,7 @@ import OurCareExperts from "@/sections/OurCareExperts/OurCareExperts";
 import TreatmentAtNivaan from "@/sections/TreatmentAtNivaan/TreatmentAtNivaan";
 import WhatPatientSayAboutUs from "@/sections/WhatPatientSayAboutUs/WhatPatientSayAboutUs";
 import React, { Suspense } from "react";
+import { doctorData, osteoarthritisFaqData, osteoarthritisPatientReviewData, osteooarthritisTreatmentAtNivan } from "./api/data";
 
 export default function Home() {
   return (
@@ -16,10 +17,10 @@ export default function Home() {
         <Navbar />
         <HeroSection />
         <FloatingButton />
-        <OurCareExperts />
-        <TreatmentAtNivaan />
-        <WhatPatientSayAboutUs />
-        <Faq />
+        <OurCareExperts doctorData={doctorData} />
+        <TreatmentAtNivaan TreatmentCardData={osteooarthritisTreatmentAtNivan} />
+        <WhatPatientSayAboutUs patientReviewData={osteoarthritisPatientReviewData} />
+        <Faq askedCardData={osteoarthritisFaqData} />
         <FormAd />
         <Footer />
       </Suspense>
