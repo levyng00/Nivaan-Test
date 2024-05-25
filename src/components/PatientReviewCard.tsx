@@ -2,20 +2,9 @@ import React from 'react'
 import googleIcon from '../../public/desktop/google-icon-small.webp'
 import Image, { StaticImageData } from 'next/image'
 import star from '../../public/desktop/star.webp'
+import { Review } from '@/app/api/data'
 
-export interface patientReview {
-    id: number,
-    name: string,
-    reviewText: string,
-    postedWhen: string,
-    img: StaticImageData
-}
-
-interface patientReviewProps {
-    review: patientReview;
-}
-
-const PatientReviewCard: React.FC<patientReviewProps> = ({ review }) => {
+const PatientReviewCard = ({ review }: { review: Review }) => {
   return (
     <div className='flex flex-col bg-[#EAF1FB] rounded-xl h-48 md:h-56 relative'>
         <div className='hidden md:flex md:justify-end'>

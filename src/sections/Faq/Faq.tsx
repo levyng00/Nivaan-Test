@@ -4,8 +4,9 @@ import { montserratBold, rubikBold } from "@/app/fonts";
 import FaqCard from "@/components/FaqCard";
 import Image from "next/image";
 import React, { useState } from "react";
+import { faqData } from "@/app/api/data";
 
-const Faq = () => {
+const Faq = ({askedCardData}: {askedCardData: faqData[]}) => {
   const [openCardIndex, setOpenCardIndex] = useState(0);
 
   const handleCardToggle = (index: number) => {

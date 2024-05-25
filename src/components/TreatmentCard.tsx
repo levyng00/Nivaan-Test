@@ -1,21 +1,10 @@
 import React from "react";
 import Image, { StaticImageData } from "next/image";
+import { TreatmentData } from "@/app/api/data";
 
-interface Treatment {
-  id: number;
-  name: string;
-  img: StaticImageData;
-  process: string;
-  benefits: string[];
-}
-
-interface TreatmentCardProps {
-  treatment: Treatment;
-}
-
-const TreatmentCard: React.FC<TreatmentCardProps> = ({ treatment }) => {
+const TreatmentCard = ({ treatment }: { treatment: TreatmentData }) => {
   return (
-    <div className="p-6 bg-white rounded-lg md:w-[33%] w-full">
+    <div className="p-6 bg-white rounded-lg w-full h-[335px]">
       <div className="flex justify-between">
         <h3 className="font-bold text-[16px] leading-[18px] md:text-[22px] md:leading-[26px] text-[#2F438F]">
           {treatment.name}
