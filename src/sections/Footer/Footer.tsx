@@ -6,61 +6,7 @@ import { Separator } from "@/components/ui/separator";
 import social1 from "../../../public/social1.png";
 import social2 from "../../../public/social2.png";
 import social3 from "../../../public/social3.png";
-
-const FooterLinks = [
-  {
-    id: 1,
-    title: "Quick links",
-    links: [
-      {
-        subTitle: "Privacy Policy",
-        url: "https://www.nivaancare.com/privacy-policy/",
-      },
-      {
-        subTitle: "Terms of Use",
-        url: "https://www.nivaancare.com/terms-and-conditions/",
-      },
-    ],
-  },
-  {
-    id: 2,
-    title: "Clinic locations",
-    links: [
-      {
-        subTitle: "East-Delhi",
-        url: "https://maps.app.goo.gl/fmNjuaiuNwNQxWbS7",
-      },
-      { subTitle: "West-Delhi", url: "https://g.co/kgs/zYFLo96" },
-      {
-        subTitle: "North-Delhi",
-        url: "https://maps.app.goo.gl/3Dg5FdmaM87GsS2UA",
-      },
-      {
-        subTitle: "South-Delhi",
-        url: "https://maps.app.goo.gl/ShnPReST8DKN9gRs5",
-      },
-    ],
-  },
-  {
-    id: 3,
-    title: "About Us",
-    links: [
-      { subTitle: "Blogs", url: "https://www.nivaancare.com/blog/" },
-      {
-        subTitle: "How It Works",
-        url: "https://www.nivaancare.com/how-it-works/",
-      },
-    ],
-  },
-  {
-    id: 4,
-    title: "Contact Us",
-    links: [
-      { subTitle: "care@nivaancare.com", url: "mailto:care@nivaancare.com" },
-      { subTitle: "+91-73 5871 2483", url: "tel:+917358712483" },
-    ],
-  },
-];
+import { FooterLinks } from "@/app/api/data";
 
 const Footer = () => {
   return (
