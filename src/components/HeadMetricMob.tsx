@@ -10,7 +10,7 @@ const HeadMetricMob = () => {
             key={i}
             className="bg-[#2F438F] rounded-lg text-white p-2 text-center flex flex-col items-center py-4"
           >
-            <p className={`${rubikBold.className}`}>{data.title}</p>
+            <p className={`${rubikBold.className} text-[20px] md:text-[40px]`}>{data.title}</p>
             <p className={`${rubikLight.className} text-xs w-32 `}>
               {data.desc}
             </p>
