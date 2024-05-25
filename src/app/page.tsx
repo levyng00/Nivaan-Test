@@ -7,10 +7,12 @@ import HeroSection from "@/sections/Osteoarthritis/HeroSection";
 import OurCareExperts from "@/sections/OurCareExperts/OurCareExperts";
 import TreatmentAtNivaan from "@/sections/TreatmentAtNivaan/TreatmentAtNivaan";
 import WhatPatientSayAboutUs from "@/sections/WhatPatientSayAboutUs/WhatPatientSayAboutUs";
+import React, { Suspense } from "react";
 
 export default function Home() {
   return (
     <main className="text-4xl montserrat">
+      <Suspense>
         <Navbar />
         <HeroSection />
         <FloatingButton />
@@ -20,6 +22,7 @@ export default function Home() {
         <Faq />
         <FormAd />
         <Footer />
+      </Suspense>
     </main>
   );
 }
