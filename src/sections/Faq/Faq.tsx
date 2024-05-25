@@ -45,8 +45,8 @@ const askedCardData = [
     desc: "Osteoarthritis is a degenerative joint disease that is characterized by the breakdown of joint cartilage and the underlying bones, causing joint pain with swelling, reduced mobility, and joint stiffness.",
   },
   {
-    title: "Which vaccination is available for HPV at BabyMD?",
-    desc: "Gardasil brand vaccine is available for HPV at BabyMD. There are two types - Gardasil 9 (highly recommended) which protects against 9 HPV strains and Gardasil 4 which protects against 4 different strains. Gardasil 9 is expected to prevent close to 98% of cervical cancers whereas Gardasil 4 can prevent close to 83% of cervical cancers.",
+    title: "Which vaccination is available for HPV at Nivaancare?",
+    desc: "Gardasil brand vaccine is available for HPV at Nivaancare. There are two types - Gardasil 9 (highly recommended) which protects against 9 HPV strains and Gardasil 4 which protects against 4 different strains. Gardasil 9 is expected to prevent close to 98% of cervical cancers whereas Gardasil 4 can prevent close to 83% of cervical cancers.",
   },
   {
     title: "Can men get the Gardasil vaccine?",
@@ -59,7 +59,7 @@ const askedCardData = [
   },
   {
     title: "How much does the HPV vaccine cost?",
-    desc: "You can find out the HPV vaccine cost by speaking with the BabyMD team. Just fill out the form to request a callback and our team member will connect with you for the costing.",
+    desc: "You can find out the HPV vaccine cost by speaking with the Nivaancare team. Just fill out the form to request a callback and our team member will connect with you for the costing.",
   },
   {
     title: "What is the vaccination schedule for the HPV vaccine?",
@@ -67,7 +67,7 @@ const askedCardData = [
   },
   {
     title: "Can my child get the HPV vaccine on Sundays?",
-    desc: "Yes, the BabyMD clinic is open on Sundays for vaccinations. Book an appointment beforehand to avail our vaccination service easily.",
+    desc: "Yes, the Nivaancare clinic is open on Sundays for vaccinations. Book an appointment beforehand to avail our vaccination service easily.",
   },
   {
     title: "Who should not get the HPV vaccine?",
