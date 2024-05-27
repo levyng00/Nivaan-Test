@@ -33,25 +33,28 @@ const HeroSection = () => {
           </ul>
         </div>
         <div className="hidden md:relative md:flex-1 md:flex md:justify-center md:items-center">
-          <Image 
-            className="absolute top-16 right-[-60px]" 
-            src={heroImg} 
-            alt="hero Img" 
+          <Image
+            className="absolute top-16 right-[-60px]"
+            src={heroImg}
+            alt="hero Img"
             width={400} // Add width
             height={400} // Add height
           />
         </div>
         <div className="relative flex-1 flex justify-center items-center md:hidden">
-          <Image 
-            className="absolute bottom-[-154px] right-[-30px]" 
-            src={heroImgMob} 
-            alt="hero Img" 
+          <Image
+            className="absolute bottom-[-154px] right-[-30px]"
+            src={heroImgMob}
+            alt="hero Img"
             width={250} // Add width
             height={250} // Add height
           />
         </div>
-        <div className="flex-1 flex justify-center flex-col items-center gap-3 mt-28">
-          <Form />
+        <div className="flex-1 flex justify-center flex-col items-center gap-3 mt-28 z-10">
+          <Form
+            formLocation="Hero-Section-Osteoarthritis-Page"
+            formName="Page-Form"
+          />
         </div>
       </div>
       <div className="mt-8">

@@ -5,7 +5,6 @@ import Image from "next/image";
 import React, { useEffect, useRef, useState } from "react";
 import { usePathname, useSearchParams } from "next/navigation";
 import { rubikReg, rubikSemiBold, rubikSemiBolder } from "@/app/fonts";
-import CustomButton from "./CustomButton";
 
 const defaultFormAction =
   "https://forms.zohopublic.in/nivaancare/form/NivaanNextjsLandingPageForm/formperma/Y2HL_Hh_THFjClPHcsQQZEjs07EIREE70jNJB07Srvk/htmlRecords/submit";
@@ -20,7 +19,7 @@ const Form = ({
 }: {
   formActionLink?: string;
   subHeading?: string;
-  formName?: "Payment Form" | "Cta Form";
+  formName?: "Page-Form" | "CTA-Form";
   header?: string;
   formLocation?: string;
   setModal?: any;
@@ -61,10 +60,6 @@ const Form = ({
     const landingPageUrl = window.location.href;
     console.log(landingPageUrl);
   }, []);
-
-  const handleModal = () => {
-    setModal(false);
-  };
 
   const handleSubmit = (event: any) => {
     event.preventDefault();
@@ -123,7 +118,7 @@ const Form = ({
   };
 
   const isValid =
-    !(parseInt(phoneNumber.charAt(0)) < 6) && phoneNumber.length === 10;
+    !(parseInt(phoneNumber.charAt(0)) < 5) && phoneNumber.length === 10;
 
   return (
     <form
@@ -133,7 +128,7 @@ const Form = ({
       method="POST"
       acceptCharset="UTF-8"
       encType="multipart/form-data"
-      className="bg-white w-full lg:w-[480px] p-4 rounded-xl relative lg:py-6 z-[999] shadow-lg border-[1px] border-[#F4F3ED]"
+      className="bg-white w-full min-w-[370px] lg:w-[480px] p-4 rounded-xl relative lg:py-6 z-[99] shadow-lg border-[1px] border-[#F4F3ED] pb-10"
     >
       <input type="hidden" name="utm_source" value={utm_source} />
       <input type="hidden" name="utm_medium" value={utm_medium} />
@@ -213,22 +208,29 @@ const Form = ({
             <option value="Faridabad">Faridabad</option>
           </select>
         </div>
-        {!isValid && (
-          <p className="text-red-600 text-xs mt-2">{errors.phoneNumber}</p>
-        )}
+        <div>
+          {!isValid && (
+            <p className="text-red-600 text-xs ">{errors.phoneNumber}</p>
+          )}
+        </div>
       </div>
       <div className="flex justify-center mt-2 lg:mt-0">
-        {/* <button
-          type="submit"
-          className="bg-[#DB5115] rounded-lg flex gap-2 shadow-sm mt-2 lg:mt-0 px-8 text-white font-semibold p-2"
-        >
-          Consult Now
-        </button> */}
-        <CustomButton
-          className="bg-[#DB5115]"
-          title="Consult Now"
-          onBtnClick={() => console.log("consult now")}
-        />
+        {!phoneNumber || !fullName || !isValid ? (
+          <button
+            type="button"
+            onClick={() => alert("Please fill all the fields")}
+            className="bg-[#DB5115] rounded-lg flex gap-2 shadow-sm mt-2 lg:mt-0 px-8 text-white font-semibold p-2"
+          >
+            Consult Now
+          </button>
+        ) : (
+          <button
+            type="submit"
+            className="bg-[#DB5115] rounded-lg flex gap-2 shadow-sm mt-8 lg:mt-0 px-8 text-white font-semibold p-2"
+          >
+            Consult Now
+          </button>
+        )}
       </div>
     </form>
   );

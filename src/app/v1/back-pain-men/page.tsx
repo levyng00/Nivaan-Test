@@ -15,6 +15,7 @@ import {
   herniatedPatientReviewData,
   herniatedTreatmentAtNivan,
 } from "../../api/data";
+import FloatingButton from "@/components/FloatingButton";
 
 const page = () => {
   return (
@@ -23,10 +24,12 @@ const page = () => {
         <Navbar />
         <HeroSection />
         <OurCareExperts doctorData={doctorData} />
+        <FloatingButton />
         <TreatmentAtNivaan TreatmentCardData={herniatedTreatmentAtNivan} />
         <WhatPatientSayAboutUs patientReviewData={herniatedPatientReviewData} />
         <Faq askedCardData={backPainFaqData} />
         <FormAd />
+
         <Footer />
       </Suspense>
     </div>
