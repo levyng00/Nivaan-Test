@@ -206,7 +206,6 @@ const Form = ({
             onChange={(event) => handleInputChange(event, "city")}
             className="border-none outline-none p-2 flex-1 rounded-lg bg-[#EAF1FB]"
           >
-            <option value="-Select-"></option>
             <option value="New Delhi">New Delhi</option>
             <option value="Gurugram">Gurugram</option>
             <option value="Noida">Noida</option>
@@ -228,7 +227,7 @@ const Form = ({
         <CustomButton
           className="bg-[#DB5115]"
           title="Consult Now"
-          onBtnClick={() => console.log('consult now')}
+          onBtnClick={() => console.log("consult now")}
         />
       </div>
     </form>

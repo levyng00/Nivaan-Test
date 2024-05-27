@@ -8,7 +8,13 @@ import OurCareExperts from "@/sections/OurCareExperts/OurCareExperts";
 import TreatmentAtNivaan from "@/sections/TreatmentAtNivaan/TreatmentAtNivaan";
 import WhatPatientSayAboutUs from "@/sections/WhatPatientSayAboutUs/WhatPatientSayAboutUs";
 import React, { Suspense } from "react";
-import { doctorData, herniatedFaqData, herniatedPatientReviewData, herniatedTreatmentAtNivan } from "../api/data";
+import {
+  backPainFaqData,
+  doctorData,
+  herniatedFaqData,
+  herniatedPatientReviewData,
+  herniatedTreatmentAtNivan,
+} from "../../api/data";
 
 const page = () => {
   return (
@@ -19,7 +25,7 @@ const page = () => {
         <OurCareExperts doctorData={doctorData} />
         <TreatmentAtNivaan TreatmentCardData={herniatedTreatmentAtNivan} />
         <WhatPatientSayAboutUs patientReviewData={herniatedPatientReviewData} />
-        <Faq askedCardData={herniatedFaqData} />
+        <Faq askedCardData={backPainFaqData} />
         <FormAd />
         <Footer />
       </Suspense>
