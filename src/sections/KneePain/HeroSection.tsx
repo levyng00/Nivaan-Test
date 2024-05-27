@@ -14,7 +14,8 @@ const HeroSection = () => {
           <h1
             className={`${montserratBold.className} text-[#2F438F] lg:text-5xl text-3xl`}
           >
-            Non Surgical Knee<br /> Pain Treatment
+            Non Surgical Knee
+            <br /> Pain Treatment
           </h1>
           <p className="text-[#DB5115] mt-4 text-sm lg:text-xl">
             100% Insurance Coverage
@@ -34,7 +35,7 @@ const HeroSection = () => {
             <li>Insurance Support</li>
           </ul>
         </div>
-        <div className="flex-1 flex justify-center flex-col items-center gap-3">
+        <div className="flex-1 flex justify-center flex-col items-center gap-3 z-10">
           <FormHeader />
           <Form />
         </div>

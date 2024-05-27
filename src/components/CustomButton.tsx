@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import { cn } from "@/lib/utils";
 
@@ -16,7 +18,11 @@ const CustomButton: React.FC<CustomButtonProps> = ({
     "font-bold rounded-lg text-xs md:text-3xl py-2 px-4 md:py-3 md:px-6 text-white";
   const combinedStyles = cn(baseStyles, className);
 
-  return <button className={combinedStyles}>{title}</button>;
+  return (
+    <button className={combinedStyles} onClick={onBtnClick}>
+      {title}
+    </button>
+  );
 };
 
 export default CustomButton;
