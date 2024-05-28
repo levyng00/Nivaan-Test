@@ -3,6 +3,7 @@ import Image from "next/image";
 import React from "react";
 import ThankYouCard from "./ThankYouCard";
 import ThankYouPlaceCard from "./ThankYouPlaceCard";
+import { ThankYouCardData } from "@/app/api/data";
 
 const ThankYou = () => {
   return (
@@ -26,21 +27,22 @@ const ThankYou = () => {
             Thank you{" "}
           </p>
           <p
-            className={`${rubikReg.className}  text-center text-sm lg:text-xl`}
+            className={`${rubikReg.className}  font-normal text-center text-sm lg:text-2xl`}
           >
             We will get in touch with you shortly to book <br /> your
             consultation with our team of experts.
           </p>
-          <div className="flex gap-3 translate-y-10">
-            <ThankYouCard />
-            <ThankYouCard /> <ThankYouCard /> <ThankYouCard />
+          <div className="flex gap-3 translate-y-12 md:translate-y-16">
+            {
+              ThankYouCardData.map(card => <ThankYouCard card={card} />)
+            }
           </div>
         </div>
       </div>
       <div className="max-w-7xl mx-auto text-[#2F438F] lg:text-2xl py-10 text-sm">
         <p className={`${rubikReg.className} text-center`}>
-          In case of any queries, please contact{" "}
-          <span className={`${rubikSemiBolder.className} `}>
+          In case of any queries, please contact{" "}<br className="block md:hidden" />
+          <span className={`${rubikSemiBolder.className} font-semibold`}>
             +91-9070057005 <br />
           </span>{" "}
           {""}
