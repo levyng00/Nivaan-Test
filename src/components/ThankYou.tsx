@@ -34,7 +34,7 @@ const ThankYou = () => {
           </p>
           <div className="flex gap-3 translate-y-12 md:translate-y-16">
             {
-              ThankYouCardData.map(card => <ThankYouCard card={card} />)
+              ThankYouCardData.map((card, i) => <ThankYouCard key={i} card={card} />)
             }
           </div>
         </div>
