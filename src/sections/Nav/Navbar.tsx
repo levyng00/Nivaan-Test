@@ -14,7 +14,7 @@ const Navbar = () => {
     console.log(modal);
   };
   return (
-    <nav className="flex flex-row justify-between py-3 md:py-6 ">
+    <nav className="flex flex-row justify-between py-3 md:py-6 mx-3 md:mx-16">
       <div className="px-6">
         <Image
           className="hidden md:flex"

@@ -20,6 +20,14 @@ import doc3Mob from "../../../public/mobile/doc3-mob.webp";
 import doc1 from "../../../public/desktop/doc-1.webp";
 import doc2 from "../../../public/desktop/doc-2.webp";
 import doc3 from "../../../public/desktop/doc-3.webp";
+import painSpecialist from "../../../public/Pain-Specialists.svg"
+import physiotherapists from "../../../public/Physiotherapists.svg"
+import psychologists from "../../../public/Psychologists.svg"
+import nutritionists from "../../../public/Nutritionists.svg"
+import painSpecialistMob from "../../../public/thankyou1.svg"
+import physiotherapistsMob from "../../../public/thankyou2.svg"
+import psychologistsMob from "../../../public/thankyou3.svg"
+import nutritionistsMob from "../../../public/thankyou4.svg"
 
 // Type definitions
 export type Review = {
@@ -62,6 +70,20 @@ export type Doctor = {
   degree: string;
   experience: string;
 };
+
+export type ThankYou = {
+  img: StaticImageData;
+  mobImg: StaticImageData;
+  title: string;
+}
+
+// thankyou card data
+export const ThankYouCardData: ThankYou[] = [
+  {img: painSpecialist, mobImg: painSpecialistMob,title: "Pain Specialist"},
+  {img: physiotherapists, mobImg: physiotherapistsMob,title: "Physiotherapists"},
+  {img: psychologists, mobImg: psychologistsMob,title: "Psychologists"},
+  {img: nutritionists, mobImg: nutritionistsMob,title: "Nutritionists"}
+]
 
 // Footer Links
 export const FooterLinks: FooterLinkSection[] = [

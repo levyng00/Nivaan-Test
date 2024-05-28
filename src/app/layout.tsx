@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import "./globals.css";
+import { GoogleTagManager } from '@next/third-parties/google'
 
 const montserrat = Montserrat({
   subsets: ['latin'],
@@ -21,6 +22,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={montserrat.variable}>{children}</body>
+      <GoogleTagManager gtmId="GTM-MZ7ZLG9" />
     </html>
   );
 }

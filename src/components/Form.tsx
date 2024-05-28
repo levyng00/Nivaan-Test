@@ -128,7 +128,7 @@ const Form = ({
       method="POST"
       acceptCharset="UTF-8"
       encType="multipart/form-data"
-      className="bg-white w-full min-w-[370px] lg:w-[480px] p-4 rounded-xl relative lg:py-6 z-[99] shadow-lg border-[1px] border-[#F4F3ED] pb-10"
+      className="bg-white w-full min-w-[370px] lg:w-[480px] p-4 rounded-xl relative lg:pt-6 z-[99] shadow-lg border-[1px] border-[#F4F3ED] pb-10"
     >
       <input type="hidden" name="utm_source" value={utm_source} />
       <input type="hidden" name="utm_medium" value={utm_medium} />
@@ -145,7 +145,7 @@ const Form = ({
       <input type="hidden" name="form_location" value={formLocation} />
 
       <h2
-        className={` ${rubikSemiBolder.className} text-center my-2 text-xl md:text-2xl lg:mb-3 text-[#2F438F]`}
+        className={` ${rubikSemiBolder.className} text-center my-2 text-xl md:text-3xl lg:mb-3 text-[#2F438F]`}
       >
         Book Consultation
       </h2>
@@ -153,11 +153,11 @@ const Form = ({
       <div className="flex flex-col gap-4 mt-4">
         <div>
           <div
-            className="flex bg-[#EAF1FB] rounded-lg items-center text-xs p-1 px-2 lg:text-sm text-gray-400"
+            className="flex bg-[#EAF1FB] rounded-lg items-center text-xs p-1 px-2 lg:text-sm text-[#888888]"
             onClick={() => inputRef2.current?.focus()}
           >
             <label className="p-2">
-              Full Name <em>*</em>
+              Name <em>*</em>
             </label>
             <input
               type="text"
@@ -172,11 +172,11 @@ const Form = ({
           <p className="mt-2 text-red-600 text-xs">{errors.fullName}</p>
         </div>
         <div
-          className="flex bg-[#EAF1FB] rounded-lg items-center text-xs p-1 px-2 lg:text-sm text-gray-400"
+          className="flex bg-[#EAF1FB] rounded-lg items-center text-xs p-1 px-2 lg:text-sm text-[#888888]"
           onClick={() => inputRef.current?.focus()}
         >
           <label className="p-2">
-            Phone <em>*</em>
+            Mobile Number <em>*</em>
           </label>
           <input
             type="text"
@@ -190,10 +190,10 @@ const Form = ({
           />
         </div>
         <div
-          className="bg-[#EAF1FB] flex items-center text-xs p-1 px-2 lg:text-sm text-gray-400 rounded-lg mt-1"
+          className="bg-[#EAF1FB] flex items-center text-xs p-1 px-2 lg:text-sm text-[#888888] rounded-lg mt-1"
           onClick={() => inputRef3.current?.focus()}
         >
-          <label className="p-2 text-[#888888] text-sm">Select City*</label>
+          <label className="p-2">Select City*</label>
           <select
             ref={inputRef3}
             name="Dropdown1"
