@@ -13,6 +13,7 @@ import {
   kneePainFaqData,
   kneePainPatientReviewData,
   kneePainTreatmentAtNivan,
+  kneePainTreatmentAtNivanHeading,
 } from "../../api/data";
 
 const page = () => {
@@ -23,7 +24,7 @@ const page = () => {
         <HeroSection />
         <FloatingButton />
         <OurCareExperts doctorData={doctorData} />
-        <TreatmentAtNivaan TreatmentCardData={kneePainTreatmentAtNivan} />
+        <TreatmentAtNivaan TreatmentCardData={kneePainTreatmentAtNivan} TreatmentHeading={kneePainTreatmentAtNivanHeading} />
         <WhatPatientSayAboutUs patientReviewData={kneePainPatientReviewData} />
         <Faq askedCardData={kneePainFaqData} />
         <FormAd />

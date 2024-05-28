@@ -18,7 +18,7 @@ const FaqCard = ({ data, isOpen, onToggle }: any) => {
         onClick={onToggle}
       >
         <div className="flex justify-between  w-full ml-6 text-[#2E448F]">
-          <h1 className={`w-60 lg:w-full ${rubikSemiBold.className} text-sm`}>
+          <h1 className={`w-60 lg:w-full ${rubikSemiBold.className} text-sm lg:text-xl font-medium`}>
             {data.title}
           </h1>
           <div className="">

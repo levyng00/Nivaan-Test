@@ -41,7 +41,7 @@ const Footer = () => {
                 <ul>
                   {obj.links.map((x) => (
                     <li key={obj.id} className="text-xs leading-6 font-light">
-                      <a 
+                      • <a 
                         href={x.url} 
                         target="_blank" 
                         rel="noopener noreferrer"

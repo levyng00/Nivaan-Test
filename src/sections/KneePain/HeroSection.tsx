@@ -10,14 +10,19 @@ import heroImgMob from "../../../public/mobile/kneePainHeroImgMob.png"
 
 const HeroSection = () => {
   return (
-    <div className="bg-[#EAF1FB] pt-8 px-8 lg:px-0 ">
+    <div className="bg-[#EAF1FB] pt-8 px-8 lg:px-0 relative">
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-10">
         <div className="flex-1">
           <h1
-            className={`${montserratBold.className} text-[#2F438F] lg:text-5xl text-3xl`}
+            className={`${montserratBold.className} text-[#2F438F] lg:text-5xl w-[140%] hidden md:block`}
           >
             Non Surgical Knee
             <br /> Pain Treatment
+          </h1>
+          <h1
+            className={`${montserratBold.className} text-[#2F438F] text-3xl block md:hidden w-[100%]`}
+          >
+            Non Surgical <br />Knee Pain <br />Treatment
           </h1>
           <p className="text-[#DB5115] mt-1 text-base lg:text-xl">
             100% Insurance Coverage
@@ -60,7 +65,7 @@ const HeroSection = () => {
           <Form />
         </div>
       </div>
-      <div className="mt-8">
+      <div className="mt-8 md:mt-6">
         <HeaderMetric />
         <HeadMetricMob />
       </div>
