@@ -34,7 +34,7 @@ export default FormAd;
 
 const FormAdCard = ({ title, desc, img }: CardDataType) => {
   return (
-    <div className="border-[1px] border-[#2F438F] w-[250px] rounded-lg text-[#2F438F] px-8 p-3 relative">
+    <div className="border-[1px] border-[#2F438F] w-[250px] rounded-lg text-[#2F438F] px-8 p-4 relative">
       <p className={`${rubikBold.className} text-2xl`}>{title}</p>
       <p className={`${rubikReg.className} text-xl`}>{desc}</p>
       <div className="border-[1px] border-[#2F438F] rounded-full absolute bg-white top-5 -left-5 p-2">
