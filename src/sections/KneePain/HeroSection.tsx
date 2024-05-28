@@ -5,6 +5,8 @@ import HeadMetricMob from "@/components/HeadMetricMob";
 import HeaderMetric from "@/components/HeaderMetric";
 import Image from "next/image";
 import React from "react";
+import heroImg from "../../../public/desktop/kneePainHeroImg.png"
+import heroImgMob from "../../../public/mobile/kneePainHeroImgMob.png"
 
 const HeroSection = () => {
   return (
@@ -17,11 +19,11 @@ const HeroSection = () => {
             Non Surgical Knee
             <br /> Pain Treatment
           </h1>
-          <p className="text-[#DB5115] mt-4 text-sm lg:text-xl">
+          <p className="text-[#DB5115] mt-1 text-base lg:text-xl">
             100% Insurance Coverage
           </p>
           <ul
-            className={`list-disc lg:mt-14 mt-10 text-xl flex flex-col gap-2 ${rubikLight.className} px-8`}
+            className={`list-disc lg:mt-14 mt-6 text-sm md:text-2xl text-[#1E1E1E] flex flex-col gap-2 ${rubikLight.className} px-8`}
           >
             <div className="flex items-center">
               <li>4.8+ Rating on</li>
@@ -34,6 +36,24 @@ const HeroSection = () => {
             <li>90% Surgeries Avoided</li>
             <li>Insurance Support</li>
           </ul>
+        </div>
+        <div className="hidden md:relative md:flex-1 md:flex md:justify-center md:items-center">
+          <Image
+            className="absolute top-16 right-[-60px]"
+            src={heroImg}
+            alt="hero Img"
+            width={400} // Add width
+            height={400} // Add height
+          />
+        </div>
+        <div className="relative flex-1 flex justify-center items-center md:hidden">
+          <Image
+            className="absolute bottom-[-41px] right-[-30px]"
+            src={heroImgMob}
+            alt="hero Img"
+            width={178}
+            height={171}
+          />
         </div>
         <div className="flex-1 flex justify-center flex-col items-center gap-3 z-10">
           <FormHeader />

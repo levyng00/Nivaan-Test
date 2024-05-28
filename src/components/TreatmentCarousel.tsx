@@ -27,7 +27,7 @@ const PatientReviewCardCarousel = ({ TreatmentCardData }: { TreatmentCardData: T
             </CarouselItem>
         ))}
       </CarouselContent>
-      <div className={`block md:${TreatmentCardData.length>3 ? "hidden" : "block"}`}>
+      <div className={`block md:${TreatmentCardData.length>3 ? "block" : "hidden"}`}>
         <CarouselPrevious />
         <CarouselNext />
       </div>
