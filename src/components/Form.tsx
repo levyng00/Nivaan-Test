@@ -145,7 +145,7 @@ const Form = ({
       <input type="hidden" name="form_location" value={formLocation} />
 
       <h2
-        className={` ${rubikSemiBolder.className} text-center my-2 text-xl md:text-2xl lg:mb-3 text-[#2F438F]`}
+        className={` ${rubikSemiBolder.className} text-center my-2 text-xl md:text-3xl lg:mb-3 text-[#2F438F]`}
       >
         Book Consultation
       </h2>
