@@ -34,7 +34,7 @@ const HeroSection = () => {
         </div>
         <div className="hidden md:relative md:flex-1 md:flex md:justify-center md:items-center">
           <Image
-            className="absolute top-36 right-[-60px]"
+            className="absolute top-32 right-[-60px]"
             src={heroImg}
             alt="hero Img"
             width={452} // Add width

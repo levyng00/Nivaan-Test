@@ -14,8 +14,8 @@ const Navbar = () => {
     console.log(modal);
   };
   return (
-    <nav className="flex flex-row justify-between py-3 md:py-6 mx-3 md:mx-16">
-      <div className="px-6">
+    <nav className="flex flex-row justify-between py-3 md:py-6 mx-3 md:mx-0">
+      <div className="px-6 md:pl-20">
         <Image
           className="hidden md:flex"
           src={NivaanLogo}
@@ -30,7 +30,7 @@ const Navbar = () => {
           height={20}
         />
       </div>
-      <div className="px-6">
+      <div className="px-6 md:pr-20">
         <button
           className="bg-[#DB5115] font-bold rounded-lg text-xs md:text-3xl py-2 px-4 md:py-3 md:px-6 text-white z-40"
           onClick={() => setModal(!modal)}

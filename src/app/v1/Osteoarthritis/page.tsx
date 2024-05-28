@@ -3,6 +3,7 @@ import {
   osteoarthritisFaqData,
   osteoarthritisPatientReviewData,
   osteooarthritisTreatmentAtNivan,
+  osteooarthritisTreatmentAtNivanHeading
 } from "@/app/api/data";
 import FloatingButton from "@/components/FloatingButton";
 import Faq from "@/sections/Faq/Faq";
@@ -22,7 +23,7 @@ const page = () => {
       <HeroSection />
       <FloatingButton />
       <OurCareExperts doctorData={doctorData} />
-      <TreatmentAtNivaan TreatmentCardData={osteooarthritisTreatmentAtNivan} />
+      <TreatmentAtNivaan TreatmentCardData={osteooarthritisTreatmentAtNivan} TreatmentHeading={osteooarthritisTreatmentAtNivanHeading} />
       <WhatPatientSayAboutUs
         patientReviewData={osteoarthritisPatientReviewData}
       />

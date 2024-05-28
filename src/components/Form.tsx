@@ -128,7 +128,7 @@ const Form = ({
       method="POST"
       acceptCharset="UTF-8"
       encType="multipart/form-data"
-      className="bg-white w-full min-w-[370px] lg:w-[480px] p-4 rounded-xl relative lg:pt-6 z-[99] shadow-lg border-[1px] border-[#F4F3ED] pb-10"
+      className="bg-white w-full min-w-[370px] lg:w-[468px] p-4 rounded-xl relative lg:pt-6 z-[99] shadow-lg border-[1px] border-[#F4F3ED] pb-6"
     >
       <input type="hidden" name="utm_source" value={utm_source} />
       <input type="hidden" name="utm_medium" value={utm_medium} />

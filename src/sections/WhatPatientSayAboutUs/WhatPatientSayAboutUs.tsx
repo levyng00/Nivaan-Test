@@ -7,7 +7,7 @@ import { Review } from '@/app/api/data'
 
 const WhatPatientSayAboutUs = ({patientReviewData}: {patientReviewData: Review[]}) => {
   return (
-    <section className='pb-20'>
+    <section className='pb-20 text-black'>
       <h2 className='text-[18px] leading-[22.09px] md:text-[42px] md:leading-[51.2px] font-extrabold mt-12 mb-8 text-[#2F438F] text-center w-1/2 md:w-full mx-auto'>What Our Patients Say About Us!</h2>
       <div className='flex flex-col md:flex-row justify-between mx-auto bg-[#2F438F] px-8 py-4 w-3/4 md:w-1/2 md:h-[72.63px] rounded-xl mb-12'>
         <p className='text-[13.48px] leading-[16.54px] flex flex-row justify-center items-center text-white'>
