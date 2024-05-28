@@ -14,7 +14,7 @@ const FormAd = () => {
   return (
     <div className="py-8 px-2">
       <div className="max-w-7xl mx-auto p-4 flex justify-center gap-16">
-        <div className=" lg:flex flex-col justify-evenly hidden">
+        <div className=" lg:flex flex-col justify-between hidden">
           <FormAdCard title="4.8/5" desc="Positive Reviews" img={googleImg} />
           <FormAdCard title="20K+" desc="Happy Patients" img={smileImg} />
           <FormAdCard title="95%" desc="Surgeries Avoided" img={likeImg} />
