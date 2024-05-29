@@ -1,17 +1,19 @@
 import { montserratBold, rubikLight } from "@/app/fonts";
-import Form from "@/components/Form";
 import heroImg from "../../../public/desktop/hero-img.webp";
 import heroImgMob from "../../../public/mobile/hero-img-mob.webp";
-import HeadMetricMob from "@/components/HeadMetricMob";
-import HeaderMetric from "@/components/HeaderMetric";
 import Image from "next/image";
 import React from "react";
-import FormHeader from "@/components/FormHeader";
+import dynamic from "next/dynamic";
+
+const Form = dynamic(() => import("@/components/Form"));
+const FormHeader = dynamic(() => import("@/components/FormHeader"));
+const HeadMetricMob = dynamic(() => import("@/components/HeadMetricMob"));
+const HeaderMetric = dynamic(() => import("@/components/HeaderMetric"));
 
 const HeroSection = () => {
   return (
-    <div className="bg-[#EAF1FB] pt-4 px-8 lg:px-0 relative">
-      <div className="max-w-7xl mx-auto lg:mx-18 flex flex-col lg:flex-row gap-10 relative">
+    <div className="bg-[#EAF1FB] pt-4 px-8 md:px-0 relative">
+      <div className="max-w-7xl mx-auto md:mx-18 flex flex-col lg:flex-row gap-10 relative">
         <div className="flex-1">
           <h1
             className={`${montserratBold.className} text-[#2F438F] lg:text-[50px] lg:leading-[61px] text-3xl`}
@@ -38,12 +40,14 @@ const HeroSection = () => {
         </div>
         <div className="hidden md:relative md:flex-1 md:flex md:justify-center md:items-center">
           <Image
-            className="absolute top-32 right-[-60px]"
+            className="absolute top-44 right-[-60px]"
             src={heroImg}
             alt="hero Img"
             width={452} // Add width
             height={422} // Add height
             priority
+            loading="eager"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           />
         </div>
         <div className="relative flex-1 flex justify-center items-center md:hidden">
@@ -54,6 +58,8 @@ const HeroSection = () => {
             width={210} // Add width
             height={193} // Add height
             priority
+            loading="eager"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           />
         </div>
         <div className="flex-1 flex justify-center flex-col items-center gap-3 mt-9 md:mt-16 z-10">

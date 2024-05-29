@@ -10,8 +10,8 @@ import heroImgMob from "../../../public/mobile/kneePainHeroImgMob.png";
 
 const HeroSection = () => {
   return (
-    <div className="bg-[#EAF1FB] pt-8 px-8 lg:px-0 relative">
-      <div className="max-w-7xl mx-auto lg:mx-18 flex flex-col lg:flex-row gap-10">
+    <div className="bg-[#EAF1FB] pt-8 px-8 md:px-0 relative">
+      <div className="max-w-7xl mx-auto md:mx-18 flex flex-col lg:flex-row gap-10">
         <div className="flex-1">
           <h1
             className={`${montserratBold.className} text-[#2F438F] lg:text-5xl w-[140%] hidden md:block`}
@@ -44,7 +44,7 @@ const HeroSection = () => {
             <li>20K+ Happy Patients</li>
           </ul>
         </div>
-        <div className="hidden md:relative md:flex-1 md:flex md:justify-center md:items-center">
+        <div className="hidden md:relative md:flex md:flex-1 md:justify-center md:items-center">
           <Image
             className="absolute top-16 right-[-60px]"
             src={heroImg}
@@ -54,7 +54,7 @@ const HeroSection = () => {
             priority
           />
         </div>
-        <div className="relative flex-1 flex justify-center items-center md:hidden">
+        <div className="relative flex flex-1 justify-center items-center md:hidden">
           <Image
             className="absolute bottom-[-41px] right-[-30px]"
             src={heroImgMob}
@@ -71,12 +71,6 @@ const HeroSection = () => {
             formName="Hero-Section-Form"
           />
         </div>
-        <Image
-          src={require("../../../public/kneePainImg.webp")}
-          alt="img"
-          className="absolute bottom-8 left-[46%] transform -translate-x-1/2 hidden lg:block"
-          height={300}
-        />
       </div>
       <div className="mt-8 md:mt-6">
         <HeaderMetric />
