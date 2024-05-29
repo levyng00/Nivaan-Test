@@ -60,7 +60,7 @@ const HeroSection = () => {
           <FormHeader />
           <Form
             formLocation="Hero-Section-Osteoarthritis-Page"
-            formName="Page-Form"
+            formName="Hero-Section-Form"
           />
         </div>
       </div>

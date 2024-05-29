@@ -6,13 +6,25 @@ import Image from "next/image";
 import CustomButton from "@/components/CustomButton";
 import Form from "@/components/Form";
 import { X } from "lucide-react";
+import { usePathname } from "next/navigation";
+import { sendGTMEvent } from "@next/third-parties/google";
 
 const Navbar = () => {
+  const pathName = usePathname();
+  const origin =
+    typeof window !== "undefined" && window.location.origin
+      ? window.location.origin
+      : "";
+  const landingPageUrl = `${origin}${pathName}`;
   const [modal, setModal] = useState(false);
   const handleClick = () => {
     setModal(!modal);
-    console.log(modal);
+    sendGTMEvent({ event: 'Form Open', value: {"Form Name": "NavBar-Form", "CTA Button text": "Book Consultation", "Landing Page URL": landingPageUrl} })
   };
+  const handleCloseModal = () => {
+    setModal(!modal)
+    sendGTMEvent({ event: 'Form Close', value: {"Form Name": "NavBar-Form", "CTA Button text": null, "Landing Page URL": landingPageUrl} })
+  }
   return (
     <nav className="flex flex-row justify-between py-3 md:py-6 ">
       <div className="max-w-7xl mx-auto lg:mx-18 flex justify-between w-full px-4">
@@ -31,7 +43,7 @@ const Navbar = () => {
         />
         <button
           className="bg-[#DB5115] font-bold rounded-lg text-xs md:text-2xl py-2 px-4 md:py-2 md:px-6 text-white z-40"
-          onClick={() => setModal(!modal)}
+          onClick={handleClick}
         >
           Book Consultation
         </button>
@@ -43,10 +55,10 @@ const Navbar = () => {
           style={{ backgroundColor: "rgba(0, 0, 0, 0.3)" }}
         >
           <div className="relative">
-            <Form formLocation="Navbar-Herniated-Page" formName="CTA-Form" />
+            <Form formLocation="Navbar-Herniated-Page" formName="NavBar-Form" />
             <X
               className="absolute top-3 z-[999] right-5 hover:cursor-pointer"
-              onClick={() => setModal(!modal)}
+              onClick={handleCloseModal}
             />
           </div>
         </div>

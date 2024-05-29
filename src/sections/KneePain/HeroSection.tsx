@@ -66,7 +66,10 @@ const HeroSection = () => {
         </div>
         <div className="flex-1 flex justify-center flex-col items-center gap-3 z-10">
           <FormHeader />
-          <Form />
+          <Form
+            formLocation="Hero-Section-KneePain-Page"
+            formName="Hero-Section-Form"
+          />
         </div>
         <Image
           src={require("../../../public/kneePainImg.webp")}

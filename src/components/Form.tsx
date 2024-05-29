@@ -5,6 +5,7 @@ import Image from "next/image";
 import React, { useEffect, useRef, useState } from "react";
 import { usePathname, useSearchParams } from "next/navigation";
 import { rubikReg, rubikSemiBold, rubikSemiBolder } from "@/app/fonts";
+import { sendGTMEvent } from '@next/third-parties/google'
 
 const defaultFormAction =
   "https://forms.zohopublic.in/nivaancare/form/NivaanNextjsLandingPageForm/formperma/Y2HL_Hh_THFjClPHcsQQZEjs07EIREE70jNJB07Srvk/htmlRecords/submit";
@@ -19,7 +20,7 @@ const Form = ({
 }: {
   formActionLink?: string;
   subHeading?: string;
-  formName?: "Page-Form" | "CTA-Form";
+  formName?: "Hero-Section-Form" | "Bottom-Open-Form" | "NavBar-Form" | "Doctor-Form" | "Floating-Button-Form";
   header?: string;
   formLocation?: string;
   setModal?: any;
@@ -227,6 +228,7 @@ const Form = ({
           <button
             type="submit"
             className="bg-[#DB5115] rounded-lg flex gap-2 shadow-sm mt-8 lg:mt-0 px-8 text-white font-semibold p-2"
+            onClick={() => sendGTMEvent({ event: 'Form Submission', value: {"Form Name": formName, "CTA Button text": "Consult Now", "Landing Page URL": url} })}
           >
             Consult Now
           </button>
