@@ -10,7 +10,7 @@ import React from "react";
 const HeroSection = () => {
   return (
     <div className="bg-[#EAF1FB] pt-4 px-8 lg:px-0 relative">
-      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-10 relative">
+      <div className="max-w-7xl mx-auto lg:mx-18 flex flex-col lg:flex-row gap-10 relative">
         <div className="flex-1">
           <h1
             className={`${montserratBold.className} text-[#2F438F] lg:text-[50px] lg:leading-[61px] text-3xl`}
