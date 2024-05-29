@@ -4,7 +4,7 @@ import { TreatmentData } from "@/app/api/data";
 
 const TreatmentCard = ({ treatment }: { treatment: TreatmentData }) => {
   return (
-    <div className="p-6 bg-white rounded-lg w-full h-[335px]">
+    <div className="p-6 bg-white rounded-lg w-full h-[355px]">
       <div className="flex justify-between">
         <h3 className="font-bold text-[16px] leading-[18px] md:text-[22px] md:leading-[26px] text-[#2F438F]">
           {treatment.name}
