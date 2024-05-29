@@ -4,7 +4,7 @@ import React from "react";
 const HeaderMetric = () => {
   return (
     <div className="bg-[#2F438F] p-2 py-4 hidden lg:block">
-      <div className="flex text-white items-center max-w-7xl mx-auto">
+      <div className="flex text-white items-start max-w-7xl mx-auto">
         <div className="flex flex-col flex-1 text-center">
           <p className={`${rubikBold.className} text-4xl`}>20K+</p>
           <p className={`text-xl mt-2`}>Happy Patients</p>

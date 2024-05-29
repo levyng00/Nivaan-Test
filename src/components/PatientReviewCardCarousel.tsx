@@ -26,7 +26,7 @@ const PatientReviewCardCarousel = ({ reviews }: { reviews: Review[] }) => {
             </CarouselItem>
         ))}
       </CarouselContent>
-      <div className={`block md:${reviews.length>3 ? "hidden" : "block"}`}>
+      <div className={`block md:${reviews.length>3 ? "block" : "hidden"}`}>
         <CarouselPrevious />
         <CarouselNext />
       </div>

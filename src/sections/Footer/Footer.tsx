@@ -3,9 +3,9 @@ import React from "react";
 import NivaanWhiteLogo from "../../../public/desktop/nivaan-white-logo.webp";
 import NivaanWhiteMobLogo from "../../../public/mobile/nivaan-white-logo-mob.webp";
 import { Separator } from "@/components/ui/separator";
-import social1 from "../../../public/social1.png";
-import social2 from "../../../public/social2.png";
-import social3 from "../../../public/social3.png";
+import social1 from "../../../public/social1@2x.png";
+import social2 from "../../../public/social2@2x.png";
+import social3 from "../../../public/social3@2x.png";
 import { FooterLinks } from "@/app/api/data";
 
 const Footer = () => {
@@ -41,7 +41,18 @@ const Footer = () => {
                 <ul>
                   {obj.links.map((x) => (
                     <li key={obj.id} className="text-xs leading-6 font-light">
-                      <a href={x.url} target="_blank" rel="noopener noreferrer">
+                      • <a 
+                        href={x.url} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className={
+                          x.subTitle === "care@nivaancare.com" || x.subTitle === "Privacy Policy" || x.subTitle === "Terms of Use"
+                            ? "underline"
+                            : x.subTitle.startsWith("+91")
+                            ? "font-bold"
+                            : ""
+                        }
+                      >
                         {x.subTitle}
                       </a>
                     </li>
@@ -49,6 +60,19 @@ const Footer = () => {
                 </ul>
               </div>
             ))}
+          </div>
+          <div className="flex flex-row justify-center">
+            <div className="flex flex-row w-20 gap-3">
+              <a href="https://www.facebook.com/nivaancare" target="_blank">
+                <Image src={social3} alt="facebook icon" />
+              </a>
+              <a href="https://www.youtube.com/@nivaancare" target="_blank">
+                <Image src={social1} alt="youtube icon" />
+              </a>
+              <a href="https://www.instagram.com/nivaancare/" target="_blank">
+                <Image src={social2} alt="instagram icon" />
+              </a>
+            </div>
           </div>
           <Separator className="mt-6 mb-3" />
           <p className="text-xs font-light pb-10 text-center">

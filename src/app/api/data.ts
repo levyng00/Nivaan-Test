@@ -20,6 +20,14 @@ import doc3Mob from "../../../public/mobile/doc3-mob.webp";
 import doc1 from "../../../public/desktop/doc-1.webp";
 import doc2 from "../../../public/desktop/doc-2.webp";
 import doc3 from "../../../public/desktop/doc-3.webp";
+import painSpecialist from "../../../public/Pain-Specialists.svg"
+import physiotherapists from "../../../public/Physiotherapists.svg"
+import psychologists from "../../../public/Psychologists.svg"
+import nutritionists from "../../../public/Nutritionists.svg"
+import painSpecialistMob from "../../../public/thankyou1.svg"
+import physiotherapistsMob from "../../../public/thankyou2.svg"
+import psychologistsMob from "../../../public/thankyou3.svg"
+import nutritionistsMob from "../../../public/thankyou4.svg"
 
 // Type definitions
 export type Review = {
@@ -62,6 +70,25 @@ export type Doctor = {
   degree: string;
   experience: string;
 };
+
+export type ThankYou = {
+  img: StaticImageData;
+  mobImg: StaticImageData;
+  title: string;
+}
+
+export type Treatment = {
+  heading: string,
+  para : string
+}
+
+// thankyou card data
+export const ThankYouCardData: ThankYou[] = [
+  {img: painSpecialist, mobImg: painSpecialistMob,title: "Pain Specialist"},
+  {img: physiotherapists, mobImg: physiotherapistsMob,title: "Physiotherapists"},
+  {img: psychologists, mobImg: psychologistsMob,title: "Psychologists"},
+  {img: nutritionists, mobImg: nutritionistsMob,title: "Nutritionists"}
+]
 
 // Footer Links
 export const FooterLinks: FooterLinkSection[] = [
@@ -307,7 +334,7 @@ export const kneePainTreatmentAtNivan: TreatmentData[] = [
     img: kneeTreatment1,
     process:
       "Doctor uses Radiofrequency waves to eliminate pain sensations in the nerves.",
-    benefits: ["Quick recovery time", "Immediate pain relief"],
+    benefits: ["Minimises inflammation ", "Quick recovery time"],
   },
   {
     id: 2,
@@ -347,6 +374,11 @@ export const kneePainTreatmentAtNivan: TreatmentData[] = [
     benefits: ["Promotes tissue repair and growth", "Long-term pain relief"],
   },
 ];
+
+export const kneePainTreatmentAtNivanHeading: Treatment = {
+  heading: 'Knee Pain Treatments at Nivaan',
+  para : 'We use the most advanced, scientifically proven technologies to ensure pain relief'
+}
 
 // Osteoarthritis Data
 export const osteoarthritisPatientReviewData: Review[] = [
@@ -463,6 +495,11 @@ export const osteooarthritisTreatmentAtNivan: TreatmentData[] = [
     ],
   },
 ];
+
+export const osteooarthritisTreatmentAtNivanHeading: Treatment = {
+  heading: 'Osteoarthritis Treatments at Nivaan',
+  para : 'We use the most advanced pain-relief technologies to ensure  maximum pain relief'
+}
 
 // Our Care Expert Data
 

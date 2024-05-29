@@ -5,23 +5,32 @@ import HeadMetricMob from "@/components/HeadMetricMob";
 import HeaderMetric from "@/components/HeaderMetric";
 import Image from "next/image";
 import React from "react";
+import heroImg from "../../../public/desktop/kneePainHeroImg.png";
+import heroImgMob from "../../../public/mobile/kneePainHeroImgMob.png";
 
 const HeroSection = () => {
   return (
-    <div className="bg-[#EAF1FB] pt-8 px-8 lg:px-0 ">
-      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-10 relative">
-        <div className="flex-1 relative">
+    <div className="bg-[#EAF1FB] pt-8 px-8 lg:px-0 relative">
+      <div className="max-w-7xl mx-auto lg:mx-18 flex flex-col lg:flex-row gap-10">
+        <div className="flex-1">
           <h1
-            className={`${montserratBold.className} text-[#2F438F] lg:text-5xl text-3xl`}
+            className={`${montserratBold.className} text-[#2F438F] lg:text-5xl w-[140%] hidden md:block`}
           >
             Non Surgical Knee
             <br /> Pain Treatment
           </h1>
-          <p className="text-[#DB5115] mt-4 text-sm lg:text-xl">
+          <h1
+            className={`${montserratBold.className} text-[#2F438F] text-3xl block md:hidden w-[100%]`}
+          >
+            Non Surgical <br />
+            Knee Pain <br />
+            Treatment
+          </h1>
+          <p className="text-[#DB5115] mt-1 text-base lg:text-xl">
             100% Insurance Coverage
           </p>
           <ul
-            className={`list-disc lg:mt-14 mt-10  textsm md:text-xl flex flex-col gap-2 ${rubikLight.className} px-8`}
+            className={`list-disc lg:mt-14 mt-6 text-sm md:text-2xl text-[#1E1E1E] flex flex-col gap-2 ${rubikLight.className} px-8`}
           >
             <div className="flex items-center">
               <li>4.8+ Rating on</li>
@@ -41,7 +50,27 @@ const HeroSection = () => {
             height={160}
           />
         </div>
-        <div className="flex-1 flex justify-center flex-col items-center gap-3 z-10 lg:pb-16">
+        <div className="hidden md:relative md:flex-1 md:flex md:justify-center md:items-center">
+          <Image
+            className="absolute top-16 right-[-60px]"
+            src={heroImg}
+            alt="hero Img"
+            width={400} // Add width
+            height={400} // Add height
+            priority
+          />
+        </div>
+        <div className="relative flex-1 flex justify-center items-center md:hidden">
+          <Image
+            className="absolute bottom-[-41px] right-[-30px]"
+            src={heroImgMob}
+            alt="hero Img"
+            width={178}
+            height={171}
+            priority
+          />
+        </div>
+        <div className="flex-1 flex justify-center flex-col items-center gap-3 z-10">
           <FormHeader />
           <Form />
         </div>
@@ -52,7 +81,7 @@ const HeroSection = () => {
           height={300}
         />
       </div>
-      <div className="mt-8 lg:-translate-y-16">
+      <div className="mt-8 md:mt-6">
         <HeaderMetric />
         <HeadMetricMob />
       </div>
