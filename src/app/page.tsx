@@ -16,5 +16,5 @@ import {
 } from "./api/data";
 
 export default function Home() {
-  return <main className="text-4xl montserrat">Home</main>;
+  return <main className="text-4xl montserrat">Hom</main>;
 }
