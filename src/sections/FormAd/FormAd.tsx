@@ -19,7 +19,7 @@ const FormAd = () => {
           <FormAdCard title="20K+" desc="Happy Patients" img={smileImg} />
           <FormAdCard title="95%" desc="Surgeries Avoided" img={likeImg} />
         </div>
-        <div className="w-full lg:w-auto z-10 ">
+        <div className="w-full lg:w-auto z-10">
           <Form
             formLocation="Herniated-Page-Bottom-Form"
             formName="Page-Form"

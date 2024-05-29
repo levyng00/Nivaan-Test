@@ -37,7 +37,7 @@ const HeroSection = () => {
               />
             </div>
             <li>90% Surgeries Avoided</li>
-            <li>Insurance Support</li>
+            <li>20K + Happy Patients</li>
           </ul>
           {pathName === "/v1/back-pain-men" ? (
             <Image

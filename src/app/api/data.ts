@@ -10,6 +10,9 @@ import herniTesti2 from "../../../public/herniTesti2.png";
 import herniTesti3 from "../../../public/herniTesti3.png";
 import backPain2 from "../../../public/backpain2.png";
 import backPain3 from "../../../public/backpain3.png";
+import backPain4 from "../../../public/backpain4.png";
+import backPain5 from "../../../public/backpain5.png";
+import backPain6 from "../../../public/backpain6.png";
 import backTesti1 from "../../../public/backTest1.png";
 import backTesti2 from "../../../public/backTesti2.png";
 import backTesti3 from "../../../public/backTesti3.png";
@@ -393,6 +396,46 @@ export const backPainTreatmentAtNivaan: TreatmentData[] = [
       "Long-term pain relief",
       "No scars or stitches",
       "Helps identify the source of pain",
+    ],
+  },
+
+  {
+    id: 4,
+    name: "Ozone Injection",
+    img: backPain4,
+    process:
+      "Doctor injects Ozone gas into the lumbar joint. This helps in reducing inflammation and pain.",
+    benefits: [
+      "Quick daycare procedure",
+      "Mobility improvement",
+      "Promotes long term healing",
+      "Reduces reliance on painkillers",
+    ],
+  },
+  {
+    id: 5,
+    name: "Endoscopic Discectomy",
+    img: backPain5,
+    process:
+      "Doctor makes a key-hole incision to remove herniated disc material with the help of an endoscope.",
+    benefits: [
+      "Much safer than other surgeries",
+      "Small incision",
+      "Minimal scar tissue formation",
+      "No damage to bones and muscles",
+    ],
+  },
+  {
+    id: 6,
+    name: "Kyphoplasty",
+    img: backPain6,
+    process:
+      "Doctor places a bone cement injection to treat compression fractures that are a result of osteoporosis/ trauma.",
+    benefits: [
+      "Restores height of collapsed bones",
+      "Restores balance of spine",
+      "Relieves pain significantly",
+      "Reduces risk for subsequent fractures",
     ],
   },
 ];
