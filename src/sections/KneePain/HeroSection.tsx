@@ -41,7 +41,7 @@ const HeroSection = () => {
               />
             </div>
             <li>90% Surgeries Avoided</li>
-            <li>Insurance Support</li>
+            <li>20K+ Happy Patients</li>
           </ul>
         </div>
         <div className="hidden md:relative md:flex-1 md:flex md:justify-center md:items-center">

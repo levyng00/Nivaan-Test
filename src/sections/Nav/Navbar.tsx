@@ -15,7 +15,7 @@ const Navbar = () => {
   };
   return (
     <nav className="flex flex-row justify-between py-3 md:py-6 ">
-      <div className="max-w-7xl mx-auto flex justify-between w-full px-4">
+      <div className="max-w-7xl mx-auto lg:mx-18 flex justify-between w-full px-4">
         <Image
           className="hidden md:flex"
           src={NivaanLogo}

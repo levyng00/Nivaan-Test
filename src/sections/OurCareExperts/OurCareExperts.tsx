@@ -19,7 +19,7 @@ const OurCareExperts = ({ doctorData, doctorDataMob }: { doctorData: Doctor[], d
   const handleClick = () => setModal(!modal);
   return (
     <div>
-      <section className="max-w-7xl mx-auto">
+      <section className="max-w-7xl mx-auto lg:mx-18">
         <h2 className="mb-6 mt-12 text-center font-extrabold text-lg md:text-[42px] md:leading-[51.2px] text-[#2F438F]">
           Our Care Experts
         </h2>
