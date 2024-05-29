@@ -43,12 +43,6 @@ const HeroSection = () => {
             <li>90% Surgeries Avoided</li>
             <li>Insurance Support</li>
           </ul>
-          <Image
-            src={require("../../../public/kneePainImg.webp")}
-            alt="img"
-            className="absolute bottom-0 right-0 translate-y-10 lg:hidden translate-x-6"
-            height={160}
-          />
         </div>
         <div className="hidden md:relative md:flex-1 md:flex md:justify-center md:items-center">
           <Image

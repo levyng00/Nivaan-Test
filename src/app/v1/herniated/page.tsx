@@ -12,6 +12,7 @@ import {
   doctorData,
   doctorDataMob,
   herniatedFaqData,
+  herniatedHeading,
   herniatedPatientReviewData,
   herniatedTreatmentAtNivan,
   osteooarthritisTreatmentAtNivanHeading,
@@ -25,7 +26,10 @@ const page = () => {
         <Navbar />
         <HeroSection />
         <OurCareExperts doctorData={doctorData} doctorDataMob={doctorDataMob} />
-        <TreatmentAtNivaan TreatmentCardData={herniatedTreatmentAtNivan} TreatmentHeading={osteooarthritisTreatmentAtNivanHeading} />
+        <TreatmentAtNivaan
+          TreatmentCardData={herniatedTreatmentAtNivan}
+          TreatmentHeading={osteooarthritisTreatmentAtNivanHeading}
+        />
         <WhatPatientSayAboutUs patientReviewData={herniatedPatientReviewData} />
         <Faq askedCardData={herniatedFaqData} />
         <FormAd />

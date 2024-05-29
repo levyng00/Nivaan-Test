@@ -10,11 +10,13 @@ import WhatPatientSayAboutUs from "@/sections/WhatPatientSayAboutUs/WhatPatientS
 import React, { Suspense } from "react";
 import {
   backPainFaqData,
+  backPainHeading,
+  backPainReview,
+  backPainTreatmentAtNivaan,
   doctorData,
   doctorDataMob,
   herniatedFaqData,
   herniatedPatientReviewData,
-  herniatedTreatmentAtNivan,
   osteooarthritisTreatmentAtNivanHeading,
 } from "../../api/data";
 import FloatingButton from "@/components/FloatingButton";
@@ -27,8 +29,11 @@ const page = () => {
         <HeroSection />
         <OurCareExperts doctorData={doctorData} doctorDataMob={doctorDataMob} />
         <FloatingButton />
-        <TreatmentAtNivaan TreatmentCardData={herniatedTreatmentAtNivan} TreatmentHeading={osteooarthritisTreatmentAtNivanHeading} />
-        <WhatPatientSayAboutUs patientReviewData={herniatedPatientReviewData} />
+        <TreatmentAtNivaan
+          TreatmentCardData={backPainTreatmentAtNivaan}
+          TreatmentHeading={backPainHeading}
+        />
+        <WhatPatientSayAboutUs patientReviewData={backPainReview} />
         <Faq askedCardData={backPainFaqData} />
         <FormAd />
 

@@ -1,3 +1,4 @@
+"use client";
 import { montserratBold, rubikReg, rubikSemiBolder } from "@/app/fonts";
 import Image from "next/image";
 import React from "react";
@@ -12,6 +13,7 @@ const ThankYou = () => {
         <Image
           src={require("../../public/desktop/nivaan-logo.webp")}
           alt="logo"
+          className="hover:cursor-pointer"
           height={30}
         />
       </div>
@@ -22,7 +24,7 @@ const ThankYou = () => {
             alt="logo-tick"
           />
           <p
-            className={`${montserratBold.className} text-[#2D458F] lg:text-5xl text-2xl`}
+            className={`${montserratBold.className} text-[#2D458F] lg:text-6xl text-2xl `}
           >
             Thank you{" "}
           </p>
@@ -33,15 +35,16 @@ const ThankYou = () => {
             consultation with our team of experts.
           </p>
           <div className="flex gap-3 translate-y-12 md:translate-y-16">
-            {
-              ThankYouCardData.map((card, i) => <ThankYouCard key={i} card={card} />)
-            }
+            {ThankYouCardData.map((card, i) => (
+              <ThankYouCard key={i} card={card} />
+            ))}
           </div>
         </div>
       </div>
       <div className="max-w-7xl mx-auto text-[#2F438F] lg:text-2xl py-10 text-sm">
         <p className={`${rubikReg.className} text-center`}>
-          In case of any queries, please contact{" "}<br className="block md:hidden" />
+          In case of any queries, please contact{" "}
+          <br className="block md:hidden" />
           <span className={`${rubikSemiBolder.className} font-semibold`}>
             +91-9070057005 <br />
           </span>{" "}

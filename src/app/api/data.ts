@@ -4,6 +4,15 @@ import testimonial2 from "../../../public/desktop/testimonial-2.webp";
 import testimonial3 from "../../../public/desktop/testimonial-3.webp";
 import testimonial4 from "../../../public/desktop/testimonial-4.webp";
 import treatment1 from "../../../public/desktop/treatment-1.webp";
+import herni1 from "../../../public/herniatedTreatment.png";
+import herniTesti1 from "../../../public/herniTest1.png";
+import herniTesti2 from "../../../public/herniTesti2.png";
+import herniTesti3 from "../../../public/herniTesti3.png";
+import backPain2 from "../../../public/backpain2.png";
+import backPain3 from "../../../public/backpain3.png";
+import backTesti1 from "../../../public/backTest1.png";
+import backTesti2 from "../../../public/backTesti2.png";
+import backTesti3 from "../../../public/backTesti3.png";
 import treatment2 from "../../../public/desktop/treatment-2.webp";
 import treatment3 from "../../../public/desktop/treatment-3.webp";
 import kneeTestimonial1 from "../../../public/desktop/kneepain/knee-testimonial-1.webp";
@@ -20,14 +29,14 @@ import doc3Mob from "../../../public/mobile/doc3-mob.webp";
 import doc1 from "../../../public/desktop/doc-1.webp";
 import doc2 from "../../../public/desktop/doc-2.webp";
 import doc3 from "../../../public/desktop/doc-3.webp";
-import painSpecialist from "../../../public/Pain-Specialists.svg"
-import physiotherapists from "../../../public/Physiotherapists.svg"
-import psychologists from "../../../public/Psychologists.svg"
-import nutritionists from "../../../public/Nutritionists.svg"
-import painSpecialistMob from "../../../public/thankyou1.svg"
-import physiotherapistsMob from "../../../public/thankyou2.svg"
-import psychologistsMob from "../../../public/thankyou3.svg"
-import nutritionistsMob from "../../../public/thankyou4.svg"
+import painSpecialist from "../../../public/Pain-Specialists.svg";
+import physiotherapists from "../../../public/Physiotherapists.svg";
+import psychologists from "../../../public/Psychologists.svg";
+import nutritionists from "../../../public/Nutritionists.svg";
+import painSpecialistMob from "../../../public/thankyou1.svg";
+import physiotherapistsMob from "../../../public/thankyou2.svg";
+import psychologistsMob from "../../../public/thankyou3.svg";
+import nutritionistsMob from "../../../public/thankyou4.svg";
 
 // Type definitions
 export type Review = {
@@ -75,20 +84,24 @@ export type ThankYou = {
   img: StaticImageData;
   mobImg: StaticImageData;
   title: string;
-}
+};
 
 export type Treatment = {
-  heading: string,
-  para : string
-}
+  heading: string;
+  para: string;
+};
 
 // thankyou card data
 export const ThankYouCardData: ThankYou[] = [
-  {img: painSpecialist, mobImg: painSpecialistMob,title: "Pain Specialist"},
-  {img: physiotherapists, mobImg: physiotherapistsMob,title: "Physiotherapists"},
-  {img: psychologists, mobImg: psychologistsMob,title: "Psychologists"},
-  {img: nutritionists, mobImg: nutritionistsMob,title: "Nutritionists"}
-]
+  { img: painSpecialist, mobImg: painSpecialistMob, title: "Pain Specialist" },
+  {
+    img: physiotherapists,
+    mobImg: physiotherapistsMob,
+    title: "Physiotherapists",
+  },
+  { img: psychologists, mobImg: psychologistsMob, title: "Psychologists" },
+  { img: nutritionists, mobImg: nutritionistsMob, title: "Nutritionists" },
+];
 
 // Footer Links
 export const FooterLinks: FooterLinkSection[] = [
@@ -205,46 +218,70 @@ export const FooterLinksMobile: FooterLinkSection[] = [
 export const herniatedPatientReviewData: Review[] = [
   {
     id: 1,
-    name: "Shushma",
+    name: "Naresh Shukla",
     reviewText:
-      "“I got relief from osteoarthritis pain without surgery with Nivaan’s RFA procedure. The procedure was quick but had a great impact on my life. Thanks Nivaan.”",
+      "“I got relief from my herniated disc pain without surgery with Nivaan’s RFA procedure. The procedure was simple yet changed my life forever. Thanks, Nivaan for eliminating pain from my life.”",
     postedWhen: "2 weeks ago",
-    img: testimonial1,
+    img: herniTesti1,
   },
   {
     id: 2,
-    name: "Renu Kaur",
+    name: "Pramod",
     reviewText:
-      "“My osteoarthritis pain was finally gone. Opting for Nivaan’s Nerve Block procedure was the best decision of my life. I got rid of that pain that too without surgeries. Thanks Nivaan”",
+      "“I finally got relief from my back pain with Nivaan’s Nerve Block procedure. I still cannot believe I got rid of herniated disc pain without any surgery, thanks Nivaan.”",
     postedWhen: "3 weeks ago",
-    img: testimonial2,
+    img: herniTesti2,
   },
   {
     id: 3,
-    name: "Amit Sharma",
+    name: "Sarita",
     reviewText:
-      "After years of struggling with osteoarthritis in my knees, I found relief with Nivaan's Nerve Block. A treatment that changed my life, allowing me to walk & move freely again.",
+      "”Surgery felt like the only option for my herniated disc.When I heard about Nivaan's non-surgical treatment I decided to try it. Their RFA procedure really helped me with the pain.”",
     postedWhen: "5 weeks ago",
-    img: testimonial3,
-  },
-  {
-    id: 4,
-    name: "Deepa Joshi",
-    reviewText:
-      "“When I heard about Nivaan's non-surgical treatment for osteoarthritis, I was skeptical but desperate for a solution. But Nivaan's RFA procedure turned out to be a life-altering choice!",
-    postedWhen: "7 weeks ago",
-    img: testimonial4,
+    img: herniTesti3,
   },
 ];
 
-export const herniatedFaqData: faqData[] = [
+export const backPainReview: Review[] = [
   {
-    title: "What is the Osteoarthritis?",
-    desc: "Osteoarthritis is a degenerative joint disease that is characterized by the breakdown of joint cartilage and the underlying bones, causing joint pain with swelling, reduced mobility, and joint stiffness.",
+    id: 1,
+    name: "Surendra",
+    reviewText:
+      "“After enduring years of back pain, Nivaan's Nerve Block gave me my life back. No surgery, just care & comfort”",
+    postedWhen: "2 weeks ago",
+    img: backTesti1,
   },
   {
-    title: "What are the primary causes of Osteoarthritis?",
-    desc: "Primary causes for Osteoarthritis include joint overuse, weight gain, ageing, joint injuries, medical disorders that affect joints, and genetic factors.",
+    id: 2,
+    name: "Ajeet",
+    reviewText:
+      "“My chronic back pain resolved with Nivaan’s RFA procedure. Surgery-free and absolutely life-changing”",
+    postedWhen: "3 weeks ago",
+    img: backTesti2,
+  },
+  {
+    id: 3,
+    name: "Vivek",
+    reviewText:
+      "”Back pain crippled my daily life until Nivaan’s intervention. Their treatment strategy avoided surgery and restored my mobility.”",
+    postedWhen: "5 weeks ago",
+    img: backTesti3,
+  },
+];
+
+export const backPainHeading: Treatment = {
+  heading: "Back Pain Treatments at Nivaan",
+  para: "We use the most advanced, scientifically proven technologies to ensure pain relief",
+};
+
+export const herniatedFaqData: faqData[] = [
+  {
+    title: "What is Herniated Disc?",
+    desc: "Disk herniation is most often the result of a gradual, aging-related wear and tear called disk degeneration. As people age, the disks become less flexible and more prone to tearing or rupturing with even a minor strain or twist.",
+  },
+  {
+    title: "What are the primary causes of Herniated Disc?",
+    desc: "Primary causes for Herniated Disc include weight gain, ageing, joint injuries, medical disorders that affect joints, and genetic factors.",
   },
   {
     title:
@@ -252,40 +289,58 @@ export const herniatedFaqData: faqData[] = [
     desc: "A pain specialist, physiotherapist, nutritionist, mindset counsellor, and care manager are involved in creating a treatment plan after proper patient evaluation and discussion among the team.",
   },
   {
-    title: "What is the best way to get instant Osteoarthritis pain relief?",
+    title: "What is the best way to get instant Herniated Disc pain relief?",
     desc: "If medical management is not working, pain specialist doctors suggest a nerve block, radiofrequency ablation & pain Injections. Once administered, these procedures are performed under local anaesthesia and immediately start relieving pain.",
   },
   {
     title:
-      "What are the various Osteoarthritis treatments available at Nivaan?",
-    desc: "Osteoarthritis can be managed through lifestyle changes, physical therapy, medicines, and various non-invasive procedures. At Nivaan, a pain specialist doctor and physiotherapist understand the patient’s chief complaint, and medical history and then develop a comprehensive, tailor-made Osteoarthritis treatment plan.",
+      "What are the various Herniated Disc treatments available at Nivaan?",
+    desc: "Herniated Disc can be managed through lifestyle changes, physical therapy, medicines, and various non-invasive procedures. At Nivaan, a pain specialist doctor and physiotherapist understand the patient’s chief complaint, and medical history and then develop a comprehensive, tailor-made Herniated Disc treatment plan.",
   },
   {
     title:
-      "What are the advantages of Osteoarthritis pain treatment procedures?",
-    desc: "Osteoarthritis treatment procedures are safe and come with minimal to no side effects. Additionally, one can experience pain relief from these procedures almost immediately. These procedures are performed by trained pain specialists under local anaesthesia with x-ray/ultrasound guidance in a clean, sterile environment.",
+      "What are the advantages of Herniated Disc pain treatment procedures?",
+    desc: "Herniated Disc treatment procedures are safe and come with minimal to no side effects. Additionally, one can experience pain relief from these procedures almost immediately. These procedures are performed by trained pain specialists under local anaesthesia with x-ray/ultrasound guidance in a clean, sterile environment.",
   },
   {
-    title: "How long does an Osteoarthritis pain treatment procedure take?",
-    desc: "An Osteoarthritis treatment procedure can take anywhere from 30-40 minutes, depending on the type of procedure.",
+    title: "How long does a Herniated Disc pain treatment procedure take?",
+    desc: "A Herniated Disc treatment procedure can take anywhere from 30-40 minutes, depending on the type of procedure.",
   },
   {
-    title: "Does insurance cover Osteoarthritis treatment?",
+    title: "Does insurance cover Herniated Disc treatment?",
     desc: "Nivaan works with various providers to have most of its treatment procedures covered under insurance.",
   },
   {
     title: "When can one join work after the treatment procedure?",
-    desc: "Since Osteoarthritis pain treatments are daycare procedures, one can join work the next day. However, the doctor may advise taking it lightly for a few days for proper healing.",
+    desc: "Since Herniated Disc pain treatments are daycare procedures, one can join work the next day. However, the doctor may advise taking it lightly for a few days for proper healing.",
   },
 ];
+
+export const herniatedHeading: Treatment = {
+  heading: "Herniated Disc Treatments at Nivaan",
+  para: "We use the most advanced pain-relief technologies to ensure  maximum pain relief",
+};
 
 export const herniatedTreatmentAtNivan: TreatmentData[] = [
   {
     id: 1,
+    name: "Endoscopic Discectomy",
+    img: herni1,
+    process:
+      "Doctor makes a key-hole incision to remove herniated disc material with the help of an endoscope.",
+    benefits: [
+      "Much safer than other surgeries",
+      "Small incision",
+      "Minimal scar tissue formation",
+      "No damage to bones and muscles",
+    ],
+  },
+  {
+    id: 2,
     name: "Nerve Blocks",
     img: treatment1,
     process:
-      "A numbing medication is injected near nerves to block the pain signals from being sent to the brain.",
+      "A numbing medication is injected near nerves to block the pain signals from being sent to the brain. ",
     benefits: [
       "Provides immediate & long-term relief",
       "Reduces inflammation",
@@ -293,7 +348,7 @@ export const herniatedTreatmentAtNivan: TreatmentData[] = [
     ],
   },
   {
-    id: 2,
+    id: 3,
     name: "Radiofrequency Ablation",
     img: treatment2,
     process: "Radiofrequency waves are used to eliminate pain sensations.",
@@ -303,16 +358,41 @@ export const herniatedTreatmentAtNivan: TreatmentData[] = [
       "Reduces reliance on painkillers",
     ],
   },
+];
+
+export const backPainTreatmentAtNivaan: TreatmentData[] = [
   {
-    id: 3,
-    name: "Pain Injections",
-    img: treatment3,
+    id: 1,
+    name: "Lumbar Radiofrequency Ablation",
+    img: treatment2,
     process:
-      "Specific steroid/numbing medicine is injected into joints, muscles, or a soft tissue site close to a joint.",
+      "Doctor uses Radiofrequency waves to eliminate pain sensations in the nerves.",
+    benefits: ["Minimises inflammation ", "Quick recovery time"],
+  },
+  {
+    id: 2,
+    name: "Caudal Epidural Injection",
+    img: backPain2,
+    process:
+      "Doctor injects a specific steroid/numbing medicine in the epidural space to reduce pain and inflammation. ",
     benefits: [
+      "Daycare procedure",
       "Provides instant pain relief",
       "Increases mobility",
       "Reduces reliance on painkillers",
+    ],
+  },
+  {
+    id: 3,
+    name: "Lumbar Transforaminal Nerve Block",
+    img: backPain3,
+    process:
+      "Doctor injects anaesthesia and steroids near lumbar nerves to block the pain signals from being sent to the brain.",
+    benefits: [
+      "Minimally invasive",
+      "Long-term pain relief",
+      "No scars or stitches",
+      "Helps identify the source of pain",
     ],
   },
 ];
@@ -431,9 +511,9 @@ export const kneePainTreatmentAtNivan: TreatmentData[] = [
 ];
 
 export const kneePainTreatmentAtNivanHeading: Treatment = {
-  heading: 'Knee Pain Treatments at Nivaan',
-  para : 'We use the most advanced, scientifically proven technologies to ensure pain relief'
-}
+  heading: "Knee Pain Treatments at Nivaan",
+  para: "We use the most advanced, scientifically proven technologies to ensure pain relief",
+};
 
 // Osteoarthritis Data
 export const osteoarthritisPatientReviewData: Review[] = [
@@ -552,9 +632,9 @@ export const osteooarthritisTreatmentAtNivan: TreatmentData[] = [
 ];
 
 export const osteooarthritisTreatmentAtNivanHeading: Treatment = {
-  heading: 'Osteoarthritis Treatments at Nivaan',
-  para : 'We use the most advanced pain-relief technologies to ensure  maximum pain relief'
-}
+  heading: "Osteoarthritis Treatments at Nivaan",
+  para: "We use the most advanced pain-relief technologies to ensure  maximum pain relief",
+};
 
 // Our Care Expert Data
 

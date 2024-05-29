@@ -9,7 +9,9 @@ const TreatmentCard = ({ treatment }: { treatment: TreatmentData }) => {
         <h3 className="font-bold text-[16px] leading-[18px] md:text-[22px] md:leading-[26px] text-[#2F438F]">
           {treatment.name}
         </h3>
-        <Image src={treatment.img} alt="treatement image" />
+        <div className="">
+          <Image src={treatment.img} alt="treatement image" />
+        </div>
       </div>
       <div className="text-[12px] leading-[18px] md:text-[15px] md:leading-[22px] mt-4">
         <h4 className="text-[#2F438F] font-semibold">Process:</h4>

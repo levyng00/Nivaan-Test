@@ -1,5 +1,5 @@
 "use client";
-import { montserratBold, rubikLight } from "@/app/fonts";
+import { montserratBold, rubikLight, rubikReg } from "@/app/fonts";
 import Form from "@/components/Form";
 import FormHeader from "@/components/FormHeader";
 import HeadMetricMob from "@/components/HeadMetricMob";
@@ -14,13 +14,15 @@ const HeroSection = () => {
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-10 relative">
         <div className="flex-1 relative">
           <h1
-            className={`${montserratBold.className} text-[#2F438F] lg:text-5xl text-3xl`}
+            className={`${montserratBold.className} text-[#2F438F] lg:text-5xl text-3xl lg:w-[500px] w-60 `}
           >
             {pathName === "/v1/herniated"
               ? "Non-Surgical Herniated Disc Treatment"
               : "Non Surgical Back Pain Treatment"}
           </h1>
-          <p className="text-[#DB5115] mt-4 text-sm lg:text-xl">
+          <p
+            className={`text-[#DB5115] mt-4 text-lg lg:text-xl ${rubikReg.className}`}
+          >
             100% Insurance Coverage
           </p>
           <ul
@@ -41,14 +43,14 @@ const HeroSection = () => {
             <Image
               src={require("../../../../public/backPainHero.webp")}
               alt="img"
-              className="absolute bottom-0 right-0 translate-y-10 lg:hidden"
+              className="absolute bottom-0 right-0 translate-y-10 lg:hidden translate-x-8"
               height={160}
             />
           ) : (
             <Image
-              src={require("../../../../public/heroHerniated.webp")}
+              src={require("../../../../public/backPainHero.webp")}
               alt="img"
-              className="absolute bottom-0 right-0 translate-y-10 lg:hidden"
+              className="absolute bottom-0 right-0 translate-y-10 lg:hidden translate-x-8"
               height={160}
             />
           )}
@@ -69,7 +71,7 @@ const HeroSection = () => {
           />
         ) : (
           <Image
-            src={require("../../../../public/heroHerniated.webp")}
+            src={require("../../../../public/backPainHero.webp")}
             alt="img"
             className="absolute bottom-8 left-[46%] transform -translate-x-1/2 hidden lg:block"
             height={300}

@@ -18,7 +18,9 @@ const FaqCard = ({ data, isOpen, onToggle }: any) => {
         onClick={onToggle}
       >
         <div className="flex justify-between  w-full ml-6 text-[#2E448F]">
-          <h1 className={`w-60 lg:w-full ${rubikSemiBold.className} text-sm lg:text-xl font-medium`}>
+          <h1
+            className={`w-60 lg:w-full ${rubikSemiBold.className} text-sm lg:text-xl font-medium`}
+          >
             {data.title}
           </h1>
           <div className="">
@@ -35,12 +37,12 @@ const FaqCard = ({ data, isOpen, onToggle }: any) => {
             </p>
           </div>
         )}
-        <div className=" absolute top-5 left-3  flex flex-col items-center  h-[70%] ">
+        <div className=" absolute top-5 left-3  flex flex-col items-center  h-[90%]   ">
           <div className="h-3 w-3 rounded-full border-[1px] border-[#2E448F] flex items-center justify-center  ">
             <div className="h-[6px] w-[6px] bg-[#2E448F] rounded-full"></div>
           </div>
           {isOpen && (
-            <div className="border-dotted border-l-[2px] h-[75%] w-1 mt-1"></div>
+            <div className="border-dotted border-l-[2px] h-[85%] lg:h-[60%] w-1 mt-1"></div>
           )}
         </div>
       </div>
