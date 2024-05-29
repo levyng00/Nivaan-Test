@@ -1,14 +1,12 @@
 import { montserratBold, rubikLight } from "@/app/fonts";
+import Form from "@/components/Form";
 import heroImg from "../../../public/desktop/hero-img.webp";
 import heroImgMob from "../../../public/mobile/hero-img-mob.webp";
+import HeadMetricMob from "@/components/HeadMetricMob";
+import HeaderMetric from "@/components/HeaderMetric";
 import Image from "next/image";
 import React from "react";
-import dynamic from "next/dynamic";
-
-const Form = dynamic(() => import("@/components/Form"));
-const FormHeader = dynamic(() => import("@/components/FormHeader"));
-const HeadMetricMob = dynamic(() => import("@/components/HeadMetricMob"));
-const HeaderMetric = dynamic(() => import("@/components/HeaderMetric"));
+import FormHeader from "@/components/FormHeader";
 
 const HeroSection = () => {
   return (
@@ -43,11 +41,10 @@ const HeroSection = () => {
             className="absolute top-44 right-[-60px]"
             src={heroImg}
             alt="hero Img"
-            width={452} // Add width
-            height={422} // Add height
+            width={452}
+            height={422}
             priority
             loading="eager"
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           />
         </div>
         <div className="relative flex-1 flex justify-center items-center md:hidden">
@@ -55,11 +52,10 @@ const HeroSection = () => {
             className="absolute bottom-[-76px] right-[-30px]"
             src={heroImgMob}
             alt="hero Img"
-            width={210} // Add width
-            height={193} // Add height
+            width={210}
+            height={193}
             priority
             loading="eager"
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           />
         </div>
         <div className="flex-1 flex justify-center flex-col items-center gap-3 mt-9 md:mt-16 z-10">
