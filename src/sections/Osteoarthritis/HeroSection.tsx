@@ -41,9 +41,10 @@ const HeroSection = () => {
             className="absolute top-44 right-[-60px]"
             src={heroImg}
             alt="hero Img"
-            width={452} // Add width
-            height={422} // Add height
+            width={452}
+            height={422}
             priority
+            loading="eager"
           />
         </div>
         <div className="relative flex-1 flex justify-center items-center md:hidden">
@@ -51,9 +52,10 @@ const HeroSection = () => {
             className="absolute bottom-[-76px] right-[-30px]"
             src={heroImgMob}
             alt="hero Img"
-            width={210} // Add width
-            height={193} // Add height
+            width={210}
+            height={193}
             priority
+            loading="eager"
           />
         </div>
         <div className="flex-1 flex justify-center flex-col items-center gap-3 mt-9 md:mt-16 z-10">
