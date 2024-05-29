@@ -15,7 +15,6 @@ import {
   herniatedHeading,
   herniatedPatientReviewData,
   herniatedTreatmentAtNivan,
-  osteooarthritisTreatmentAtNivanHeading,
 } from "../../api/data";
 import FloatingButton from "@/components/FloatingButton";
 
