@@ -44,7 +44,7 @@ const HeroSection = () => {
             width={452}
             height={422}
             priority
-            loading="eager"
+            quality={80}
           />
         </div>
         <div className="relative flex-1 flex justify-center items-center md:hidden">
@@ -55,7 +55,7 @@ const HeroSection = () => {
             width={210}
             height={193}
             priority
-            loading="eager"
+            quality={80}
           />
         </div>
         <div className="flex-1 flex justify-center flex-col items-center gap-3 mt-9 md:mt-16 z-10">
