@@ -30,7 +30,6 @@ const Footer = () => {
         </div>
         <div className="mx-12 md:mx-14">
           <Separator className="my-6" />
-          {/* <div className='flex flex-row justify-between'> */}
           <div className="grid grid-cols-2 md:grid-cols-4 md:w-4/5 md:mx-auto">
             {FooterLinks.map((obj, i) => (
               <div
@@ -40,10 +39,15 @@ const Footer = () => {
                 <h6 className="text-sm leading-8 font-medium">{obj.title}</h6>
                 <ul>
                   {obj.links.map((x) => (
-                    <li key={obj.id} className="text-xs leading-6 font-light">
-                      • <a 
-                        href={x.url} 
-                        target="_blank" 
+                    <li
+                      key={x.id}
+                      className={`text-xs leading-6 font-light ${
+                        obj.title !== "Contact Us" ? "list-disc list-inside" : ""
+                      }`}
+                    >
+                      <a
+                        href={x.url}
+                        target="_blank"
                         rel="noopener noreferrer"
                         className={
                           x.subTitle === "care@nivaancare.com" || x.subTitle === "Privacy Policy" || x.subTitle === "Terms of Use"
@@ -61,6 +65,7 @@ const Footer = () => {
               </div>
             ))}
           </div>
+
           <div className="flex flex-row justify-center">
             <div className="flex flex-row w-20 gap-3">
               <a href="https://www.facebook.com/nivaancare" target="_blank">
@@ -75,7 +80,7 @@ const Footer = () => {
             </div>
           </div>
           <Separator className="mt-6 mb-3" />
-          <p className="text-xs font-light pb-10 text-center">
+          <p className="text-[8px] leading-[14px] md:text-xs font-light pb-16 md:pb-10 text-center">
             © 2024 Nivaan. All Rights Reserved. Terms & Conditions Apply*
           </p>
         </div>
