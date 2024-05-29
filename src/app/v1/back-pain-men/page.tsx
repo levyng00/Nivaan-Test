@@ -14,6 +14,7 @@ import {
   backPainReview,
   backPainTreatmentAtNivaan,
   doctorData,
+  doctorDataMob,
   herniatedFaqData,
   herniatedPatientReviewData,
   osteooarthritisTreatmentAtNivanHeading,
@@ -26,7 +27,7 @@ const page = () => {
       <Suspense>
         <Navbar />
         <HeroSection />
-        <OurCareExperts doctorData={doctorData} />
+        <OurCareExperts doctorData={doctorData} doctorDataMob={doctorDataMob} />
         <FloatingButton />
         <TreatmentAtNivaan
           TreatmentCardData={backPainTreatmentAtNivaan}

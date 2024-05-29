@@ -13,7 +13,7 @@ import Form from "@/components/Form";
 import { X } from "lucide-react";
 import { usePathname } from "next/navigation";
 
-const OurCareExperts = ({ doctorData }: { doctorData: Doctor[] }) => {
+const OurCareExperts = ({ doctorData, doctorDataMob }: { doctorData: Doctor[], doctorDataMob: Doctor[] }) => {
   const pathName = usePathname();
   const [modal, setModal] = useState(false);
   const handleClick = () => setModal(!modal);
@@ -29,7 +29,7 @@ const OurCareExperts = ({ doctorData }: { doctorData: Doctor[] }) => {
           ))}
         </div>
         <div className="flex flex-col md:hidden  items-center">
-          {doctorData.map((doc) => (
+          {doctorDataMob.map((doc) => (
             <DoctorCard key={doc.id} doc={doc} />
           ))}
         </div>

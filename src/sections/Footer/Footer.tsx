@@ -6,7 +6,7 @@ import { Separator } from "@/components/ui/separator";
 import social1 from "../../../public/social1@2x.png";
 import social2 from "../../../public/social2@2x.png";
 import social3 from "../../../public/social3@2x.png";
-import { FooterLinks } from "@/app/api/data";
+import { FooterLinks, FooterLinksMobile } from "@/app/api/data";
 
 const Footer = () => {
   return (
@@ -30,8 +30,7 @@ const Footer = () => {
         </div>
         <div className="mx-12 md:mx-14">
           <Separator className="my-6" />
-          {/* <div className='flex flex-row justify-between'> */}
-          <div className="grid grid-cols-2 md:grid-cols-4 md:w-4/5 md:mx-auto">
+          <div className="hidden md:grid md:grid-cols-4 md:w-4/5 md:mx-auto">
             {FooterLinks.map((obj, i) => (
               <div
                 key={i}
@@ -40,10 +39,15 @@ const Footer = () => {
                 <h6 className="text-sm leading-8 font-medium">{obj.title}</h6>
                 <ul>
                   {obj.links.map((x) => (
-                    <li key={obj.id} className="text-xs leading-6 font-light">
-                      • <a 
-                        href={x.url} 
-                        target="_blank" 
+                    <li
+                      key={x.subTitle}
+                      className={`text-xs leading-6 font-light ${
+                        obj.title !== "Contact Us" ? "list-disc list-inside" : ""
+                      }`}
+                    >
+                      <a
+                        href={x.url}
+                        target="_blank"
                         rel="noopener noreferrer"
                         className={
                           x.subTitle === "care@nivaancare.com" || x.subTitle === "Privacy Policy" || x.subTitle === "Terms of Use"
@@ -61,6 +65,43 @@ const Footer = () => {
               </div>
             ))}
           </div>
+
+          <div className="grid grid-cols-2 md:hidden">
+            {FooterLinksMobile.map((obj, i) => (
+              <div
+                key={i}
+                className="flex flex-col items-start md:px-18 mb-4 px-5 gap-2"
+              >
+                <h6 className="text-sm leading-8 font-medium">{obj.title}</h6>
+                <ul>
+                  {obj.links.map((x) => (
+                    <li
+                      key={x.subTitle}
+                      className={`text-xs leading-6 font-light ${
+                        obj.title !== "Contact Us" ? "list-disc list-inside" : ""
+                      }`}
+                    >
+                      <a
+                        href={x.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={
+                          x.subTitle === "care@nivaancare.com" || x.subTitle === "Privacy Policy" || x.subTitle === "Terms of Use"
+                            ? "underline"
+                            : x.subTitle.startsWith("+91")
+                            ? "font-bold"
+                            : ""
+                        }
+                      >
+                        {x.subTitle}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+
           <div className="flex flex-row justify-center">
             <div className="flex flex-row w-20 gap-3">
               <a href="https://www.facebook.com/nivaancare" target="_blank">
@@ -75,7 +116,7 @@ const Footer = () => {
             </div>
           </div>
           <Separator className="mt-6 mb-3" />
-          <p className="text-xs font-light pb-10 text-center">
+          <p className="text-[8px] leading-[14px] md:text-xs font-light pb-16 md:pb-10 text-center">
             © 2024 Nivaan. All Rights Reserved. Terms & Conditions Apply*
           </p>
         </div>

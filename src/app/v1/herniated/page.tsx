@@ -10,6 +10,7 @@ import WhatPatientSayAboutUs from "@/sections/WhatPatientSayAboutUs/WhatPatientS
 import React, { Suspense } from "react";
 import {
   doctorData,
+  doctorDataMob,
   herniatedFaqData,
   herniatedHeading,
   herniatedPatientReviewData,
@@ -24,10 +25,10 @@ const page = () => {
       <Suspense>
         <Navbar />
         <HeroSection />
-        <OurCareExperts doctorData={doctorData} />
+        <OurCareExperts doctorData={doctorData} doctorDataMob={doctorDataMob} />
         <TreatmentAtNivaan
           TreatmentCardData={herniatedTreatmentAtNivan}
-          TreatmentHeading={herniatedHeading}
+          TreatmentHeading={osteooarthritisTreatmentAtNivanHeading}
         />
         <WhatPatientSayAboutUs patientReviewData={herniatedPatientReviewData} />
         <Faq askedCardData={herniatedFaqData} />
