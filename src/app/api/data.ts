@@ -146,6 +146,61 @@ export const FooterLinks: FooterLinkSection[] = [
   },
 ];
 
+export const FooterLinksMobile: FooterLinkSection[] = [
+  {
+    id: 1,
+    title: "Quick links",
+    links: [
+      {
+        subTitle: "Privacy Policy",
+        url: "https://www.nivaancare.com/privacy-policy/",
+      },
+      {
+        subTitle: "Terms of Use",
+        url: "https://www.nivaancare.com/terms-and-conditions/",
+      },
+    ],
+  },
+  {
+    id: 2,
+    title: "About Us",
+    links: [
+      { subTitle: "Blogs", url: "https://www.nivaancare.com/blog/" },
+      {
+        subTitle: "How It Works",
+        url: "https://www.nivaancare.com/how-it-works/",
+      },
+    ],
+  },
+  {
+    id: 3,
+    title: "Clinic locations",
+    links: [
+      {
+        subTitle: "East-Delhi",
+        url: "https://maps.app.goo.gl/fmNjuaiuNwNQxWbS7",
+      },
+      { subTitle: "West-Delhi", url: "https://g.co/kgs/zYFLo96" },
+      {
+        subTitle: "North-Delhi",
+        url: "https://maps.app.goo.gl/3Dg5FdmaM87GsS2UA",
+      },
+      {
+        subTitle: "South-Delhi",
+        url: "https://maps.app.goo.gl/ShnPReST8DKN9gRs5",
+      },
+    ],
+  },
+  {
+    id: 4,
+    title: "Contact Us",
+    links: [
+      { subTitle: "care@nivaancare.com", url: "mailto:care@nivaancare.com" },
+      { subTitle: "+91-73 5871 2483", url: "tel:+917358712483" },
+    ],
+  },
+];
+
 // Herniated Data
 export const herniatedPatientReviewData: Review[] = [
   {
@@ -530,10 +585,10 @@ export const doctorData: Doctor[] = [
   },
 ];
 
-const doctorDataMob: Doctor[] = [
+export const doctorDataMob: Doctor[] = [
   {
     id: 1,
-    img: doc1Mob,
+    img: doc2,
     name: "Dr. Naveen Talwar",
     field: "Orthopaedic Surgeon,",
     degree: "MBBS, MS – Orthopaedics",
@@ -541,7 +596,7 @@ const doctorDataMob: Doctor[] = [
   },
   {
     id: 2,
-    img: doc2Mob,
+    img: doc1,
     name: "Dr. Rohit Gulati ",
     field: "Pain Management Specialist",
     degree: "MBBS, DA, DNB",
@@ -549,7 +604,7 @@ const doctorDataMob: Doctor[] = [
   },
   {
     id: 3,
-    img: doc3Mob,
+    img: doc3,
     name: "Dr. Garima Gupta",
     field: "Pain Management Specialist",
     degree: "MBBS, DA, FIPM",

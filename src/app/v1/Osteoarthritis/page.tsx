@@ -1,5 +1,6 @@
 import {
   doctorData,
+  doctorDataMob,
   osteoarthritisFaqData,
   osteoarthritisPatientReviewData,
   osteooarthritisTreatmentAtNivan,
@@ -22,7 +23,7 @@ const page = () => {
       <Navbar />
       <HeroSection />
       <FloatingButton />
-      <OurCareExperts doctorData={doctorData} />
+      <OurCareExperts doctorData={doctorData} doctorDataMob={doctorDataMob} />
       <TreatmentAtNivaan TreatmentCardData={osteooarthritisTreatmentAtNivan} TreatmentHeading={osteooarthritisTreatmentAtNivanHeading} />
       <WhatPatientSayAboutUs
         patientReviewData={osteoarthritisPatientReviewData}
