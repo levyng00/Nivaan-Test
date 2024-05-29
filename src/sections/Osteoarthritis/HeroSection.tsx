@@ -6,6 +6,7 @@ import HeadMetricMob from "@/components/HeadMetricMob";
 import HeaderMetric from "@/components/HeaderMetric";
 import Image from "next/image";
 import React from "react";
+import FormHeader from "@/components/FormHeader";
 
 const HeroSection = () => {
   return (
@@ -17,6 +18,9 @@ const HeroSection = () => {
           >
             Non Surgical Osteoarthritis Treatment
           </h1>
+          <p className="text-[#DB5115] mt-1 text-base lg:text-xl">
+            100% Insurance Coverage
+          </p>
           <ul
             className={`font-light list-disc text-[14px] mt-6 text-sm md:text-2xl text-[#1E1E1E] lg:mt-14 flex flex-col gap-2 ${rubikLight.className} px-4`}
           >
@@ -53,6 +57,7 @@ const HeroSection = () => {
           />
         </div>
         <div className="flex-1 flex justify-center flex-col items-center gap-3 mt-9 md:mt-16 z-10">
+          <FormHeader />
           <Form
             formLocation="Hero-Section-Osteoarthritis-Page"
             formName="Page-Form"

@@ -11,6 +11,7 @@ import React, { Suspense } from "react";
 import {
   backPainFaqData,
   doctorData,
+  doctorDataMob,
   herniatedFaqData,
   herniatedPatientReviewData,
   herniatedTreatmentAtNivan,
@@ -24,7 +25,7 @@ const page = () => {
       <Suspense>
         <Navbar />
         <HeroSection />
-        <OurCareExperts doctorData={doctorData} />
+        <OurCareExperts doctorData={doctorData} doctorDataMob={doctorDataMob} />
         <FloatingButton />
         <TreatmentAtNivaan TreatmentCardData={herniatedTreatmentAtNivan} TreatmentHeading={osteooarthritisTreatmentAtNivanHeading} />
         <WhatPatientSayAboutUs patientReviewData={herniatedPatientReviewData} />

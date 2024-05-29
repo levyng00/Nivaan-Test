@@ -10,6 +10,7 @@ import React, { Suspense } from "react";
 import FloatingButton from "@/components/FloatingButton";
 import {
   doctorData,
+  doctorDataMob,
   kneePainFaqData,
   kneePainPatientReviewData,
   kneePainTreatmentAtNivan,
@@ -23,7 +24,7 @@ const page = () => {
         <Navbar />
         <HeroSection />
         <FloatingButton />
-        <OurCareExperts doctorData={doctorData} />
+        <OurCareExperts doctorData={doctorData} doctorDataMob={doctorDataMob} />
         <TreatmentAtNivaan TreatmentCardData={kneePainTreatmentAtNivan} TreatmentHeading={kneePainTreatmentAtNivanHeading} />
         <WhatPatientSayAboutUs patientReviewData={kneePainPatientReviewData} />
         <Faq askedCardData={kneePainFaqData} />
