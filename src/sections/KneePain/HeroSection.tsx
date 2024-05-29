@@ -5,8 +5,8 @@ import HeadMetricMob from "@/components/HeadMetricMob";
 import HeaderMetric from "@/components/HeaderMetric";
 import Image from "next/image";
 import React from "react";
-import heroImg from "../../../public/desktop/kneePainHeroImg.png"
-import heroImgMob from "../../../public/mobile/kneePainHeroImgMob.png"
+import heroImg from "../../../public/desktop/kneePainHeroImg.png";
+import heroImgMob from "../../../public/mobile/kneePainHeroImgMob.png";
 
 const HeroSection = () => {
   return (
@@ -22,7 +22,9 @@ const HeroSection = () => {
           <h1
             className={`${montserratBold.className} text-[#2F438F] text-3xl block md:hidden w-[100%]`}
           >
-            Non Surgical <br />Knee Pain <br />Treatment
+            Non Surgical <br />
+            Knee Pain <br />
+            Treatment
           </h1>
           <p className="text-[#DB5115] mt-1 text-base lg:text-xl">
             100% Insurance Coverage
@@ -41,6 +43,12 @@ const HeroSection = () => {
             <li>90% Surgeries Avoided</li>
             <li>Insurance Support</li>
           </ul>
+          <Image
+            src={require("../../../public/kneePainImg.webp")}
+            alt="img"
+            className="absolute bottom-0 right-0 translate-y-10 lg:hidden translate-x-6"
+            height={160}
+          />
         </div>
         <div className="hidden md:relative md:flex-1 md:flex md:justify-center md:items-center">
           <Image
@@ -66,6 +74,12 @@ const HeroSection = () => {
           <FormHeader />
           <Form />
         </div>
+        <Image
+          src={require("../../../public/kneePainImg.webp")}
+          alt="img"
+          className="absolute bottom-8 left-[46%] transform -translate-x-1/2 hidden lg:block"
+          height={300}
+        />
       </div>
       <div className="mt-8 md:mt-6">
         <HeaderMetric />
