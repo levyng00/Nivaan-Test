@@ -12,14 +12,27 @@ import { Doctor } from "@/app/api/data";
 import Form from "@/components/Form";
 import { X } from "lucide-react";
 import { usePathname } from "next/navigation";
+import { sendGTMEvent } from "@next/third-parties/google";
 
 const OurCareExperts = ({ doctorData, doctorDataMob }: { doctorData: Doctor[], doctorDataMob: Doctor[] }) => {
   const pathName = usePathname();
+  const origin =
+    typeof window !== "undefined" && window.location.origin
+      ? window.location.origin
+      : "";
+  const landingPageUrl = `${origin}${pathName}`;
   const [modal, setModal] = useState(false);
-  const handleClick = () => setModal(!modal);
+  const handleClick = () => {
+    sendGTMEvent({ event: 'Form Open', value: {"Form Name": "Doctor-Form", "CTA Button text": "Book Consultation", "Landing Page URL": landingPageUrl} })
+    setModal(!modal)
+  };
+  const handleCloseModal = () => {
+    setModal(!modal)
+    sendGTMEvent({ event: 'Form Close', value: {"Form Name": "Doctor-Form", "CTA Button text": null, "Landing Page URL": landingPageUrl} })
+  }
   return (
     <div>
-      <section className="max-w-7xl mx-auto">
+      <section className="max-w-7xl mx-auto lg:mx-18">
         <h2 className="mb-6 mt-12 text-center font-extrabold text-lg md:text-[42px] md:leading-[51.2px] text-[#2F438F]">
           Our Care Experts
         </h2>
@@ -59,11 +72,11 @@ const OurCareExperts = ({ doctorData, doctorDataMob }: { doctorData: Doctor[], d
                   ? "BackPain-Men-Our-Care-Experts"
                   : ""
               }
-              formName="Page-Form"
+              formName="Doctor-Form"
             />
             <X
               className="absolute top-3 z-[999] right-5 hover:cursor-pointer"
-              onClick={() => setModal(!modal)}
+              onClick={handleCloseModal}
             />
           </div>
         </div>

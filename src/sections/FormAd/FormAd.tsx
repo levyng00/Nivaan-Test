@@ -21,8 +21,8 @@ const FormAd = () => {
         </div>
         <div className="w-full lg:w-auto z-10">
           <Form
-            formLocation="Herniated-Page-Bottom-Form"
-            formName="Page-Form"
+            formLocation="Bottom Open form"
+            formName="Bottom-Open-Form"
           />
         </div>
       </div>
