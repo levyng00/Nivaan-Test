@@ -45,6 +45,7 @@ const HeroSection = () => {
               alt="img"
               className="absolute bottom-0 right-0 translate-y-10 lg:hidden translate-x-8"
               height={160}
+              loading="lazy"
             />
           ) : (
             <Image
@@ -52,6 +53,7 @@ const HeroSection = () => {
               alt="img"
               className="absolute bottom-0 right-0 translate-y-10 lg:hidden translate-x-8"
               height={160}
+              loading="lazy"
             />
           )}
         </div>
