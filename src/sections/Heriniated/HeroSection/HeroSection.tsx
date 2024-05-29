@@ -43,15 +43,19 @@ const HeroSection = () => {
             <Image
               src={require("../../../../public/backPainHero.webp")}
               alt="img"
-              className="absolute bottom-0 right-0 translate-y-10 lg:hidden translate-x-8"
+              className="absolute bottom-0 right-0 translate-y-10 lg:hidden translate-x-6"
               height={160}
+              width={150}
+              loading="lazy"
             />
           ) : (
             <Image
               src={require("../../../../public/backPainHero.webp")}
               alt="img"
-              className="absolute bottom-0 right-0 translate-y-10 lg:hidden translate-x-8"
+              className="absolute bottom-0 right-0 translate-y-10 lg:hidden translate-x-6"
               height={160}
+              width={150}
+              loading="lazy"
             />
           )}
         </div>

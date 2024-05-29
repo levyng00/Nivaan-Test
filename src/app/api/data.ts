@@ -632,10 +632,14 @@ export const osteooarthritisTreatmentAtNivan: TreatmentData[] = [
 ];
 
 export const osteooarthritisTreatmentAtNivanHeading: Treatment = {
-  heading: "Osteoarthritis Treatments at Nivaan",
+  heading: "Herniated Disc Treatments at Nivaan",
   para: "We use the most advanced pain-relief technologies to ensure  maximum pain relief",
 };
 
+export const herniatedHeader: Treatment = {
+  heading: "Osteoarthritis Treatments at Nivaan",
+  para: "We use the most advanced pain-relief technologies to ensure  maximum pain relief",
+};
 // Our Care Expert Data
 
 export const doctorData: Doctor[] = [
