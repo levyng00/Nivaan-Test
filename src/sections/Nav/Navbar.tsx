@@ -30,7 +30,7 @@ const Navbar = () => {
           height={20}
         />
         <button
-          className="bg-[#DB5115] font-bold rounded-lg text-xs md:text-3xl py-2 px-4 md:py-3 md:px-6 text-white z-40"
+          className="bg-[#DB5115] font-bold rounded-lg text-xs md:text-2xl py-2 px-4 md:py-2 md:px-6 text-white z-40"
           onClick={() => setModal(!modal)}
         >
           Book Consultation

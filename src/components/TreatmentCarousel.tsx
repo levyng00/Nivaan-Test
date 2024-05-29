@@ -1,42 +1,53 @@
-'use client'
-import React from 'react'
-import TreatmentCard from '@/components/TreatmentCard'
-import { Card, CardContent } from "@/components/ui/card"
+"use client";
+import React from "react";
+import TreatmentCard from "@/components/TreatmentCard";
+import { Card, CardContent } from "@/components/ui/card";
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from "@/components/ui/carousel"
+} from "@/components/ui/carousel";
 import { TreatmentData } from "@/app/api/data";
 
-const PatientReviewCardCarousel = ({ TreatmentCardData }: { TreatmentCardData: TreatmentData[] }) => {
+const PatientReviewCardCarousel = ({
+  TreatmentCardData,
+}: {
+  TreatmentCardData: TreatmentData[];
+}) => {
   return (
-    <div className='px-2 md:px-16'>
-    <Carousel
-      opts={{
-        align: "start",
-      }}
-      className="w-full"
-    >
-      <CarouselContent>
-        {TreatmentCardData?.map(treatment => (
-            <CarouselItem key={treatment.id} className="md:basis-1/2 lg:basis-1/3">
-                <TreatmentCard treatment={treatment} />
+    <div className="px-2 md:px-16">
+      <Carousel
+        opts={{
+          align: "start",
+        }}
+        className="w-full"
+      >
+        <CarouselContent>
+          {TreatmentCardData?.map((treatment) => (
+            <CarouselItem
+              key={treatment.id}
+              className="md:basis-1/2 lg:basis-1/3"
+            >
+              <TreatmentCard treatment={treatment} />
             </CarouselItem>
-        ))}
-      </CarouselContent>
-      <div className={`block md:${TreatmentCardData.length>3 ? "block" : "hidden"}`}>
-        <CarouselPrevious />
-        <CarouselNext />
-      </div>
-    </Carousel>
+          ))}
+        </CarouselContent>
+        <div
+          className={`block md:${
+            TreatmentCardData.length > 3 ? "block" : "hidden"
+          }`}
+        >
+          <CarouselPrevious />
+          <CarouselNext />
+        </div>
+      </Carousel>
     </div>
-  )
-}
+  );
+};
 
-export default PatientReviewCardCarousel
+export default PatientReviewCardCarousel;
 
 // 'use client'
 // import React, {useState} from "react"
