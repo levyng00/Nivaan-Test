@@ -49,6 +49,7 @@ const HeroSection = () => {
             alt="hero Img"
             width={400} // Add width
             height={400} // Add height
+            priority
           />
         </div>
         <div className="relative flex-1 flex justify-center items-center md:hidden">
@@ -58,6 +59,7 @@ const HeroSection = () => {
             alt="hero Img"
             width={178}
             height={171}
+            priority
           />
         </div>
         <div className="flex-1 flex justify-center flex-col items-center gap-3 z-10">
