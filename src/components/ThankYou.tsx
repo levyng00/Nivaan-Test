@@ -46,7 +46,8 @@ const ThankYou = () => {
           In case of any queries, please contact{" "}
           <br className="block md:hidden" />
           <span className={`${rubikSemiBolder.className} font-semibold`}>
-            +91-9070057005 <br />
+            +91-9070057005
+            <br />
           </span>{" "}
           {""}
           or visit your nearest Nivaan clinic
