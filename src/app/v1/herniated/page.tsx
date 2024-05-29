@@ -28,7 +28,7 @@ const page = () => {
         <OurCareExperts doctorData={doctorData} doctorDataMob={doctorDataMob} />
         <TreatmentAtNivaan
           TreatmentCardData={herniatedTreatmentAtNivan}
-          TreatmentHeading={osteooarthritisTreatmentAtNivanHeading}
+          TreatmentHeading={herniatedHeading}
         />
         <WhatPatientSayAboutUs patientReviewData={herniatedPatientReviewData} />
         <Faq askedCardData={herniatedFaqData} />
