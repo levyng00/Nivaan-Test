@@ -10,8 +10,8 @@ import FormHeader from "@/components/FormHeader";
 
 const HeroSection = () => {
   return (
-    <div className="bg-[#EAF1FB] pt-4 px-8 lg:px-0 relative">
-      <div className="max-w-7xl mx-auto lg:mx-18 flex flex-col lg:flex-row gap-10 relative">
+    <div className="bg-[#EAF1FB] pt-4 px-8 md:px-0 relative">
+      <div className="max-w-7xl mx-auto md:mx-18 flex flex-col lg:flex-row gap-10 relative">
         <div className="flex-1">
           <h1
             className={`${montserratBold.className} text-[#2F438F] lg:text-[50px] lg:leading-[61px] text-3xl`}
@@ -38,7 +38,7 @@ const HeroSection = () => {
         </div>
         <div className="hidden md:relative md:flex-1 md:flex md:justify-center md:items-center">
           <Image
-            className="absolute top-32 right-[-60px]"
+            className="absolute top-44 right-[-60px]"
             src={heroImg}
             alt="hero Img"
             width={452} // Add width

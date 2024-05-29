@@ -10,8 +10,8 @@ import heroImgMob from "../../../public/mobile/kneePainHeroImgMob.png";
 
 const HeroSection = () => {
   return (
-    <div className="bg-[#EAF1FB] pt-8 px-8 lg:px-0 relative">
-      <div className="max-w-7xl mx-auto lg:mx-18 flex flex-col lg:flex-row gap-10">
+    <div className="bg-[#EAF1FB] pt-8 px-8 md:px-0 relative">
+      <div className="max-w-7xl mx-auto md:mx-18 flex flex-col lg:flex-row gap-10">
         <div className="flex-1">
           <h1
             className={`${montserratBold.className} text-[#2F438F] lg:text-5xl w-[140%] hidden md:block`}
